@@ -1,10 +1,12 @@
-from apps.blockchain.handlers.score_updated import ScoreUpdatedHandler
+from eth_utils import keccak, to_hex
+from apps.blockchain.handlers.score_updated import ScoreUpdateHandler
+
+
 EVENT_HANDLERS = {
-    'ScoreUpdated': ScoreUpdatedHandler(),
+    to_hex(keccak(b"ScoreUpdate(address,uint8,uint8,int32)")): ScoreUpdateHandler(),
 }
 
-def route_event(event_name, event):
-    handler = EVENT_HANDLERS.get(event_name)
-    if not handler:
-        raise ValueError(f"No handler found for event: {event_name}")
+def route_event(event):
+    handler = EVENT_HANDLERS.get(event['topics'][0])
+    if not handler: return
     handler.process(event)

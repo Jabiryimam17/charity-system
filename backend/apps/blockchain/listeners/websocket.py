@@ -9,7 +9,7 @@ from apps.blockchain.routers import route_event
 logger = logging.getLogger(__name__)
 
 
-# from  apps.blockchain.router import route_event
+# from apps.blockchain.router import route_event
 
 def load_contract(ws, address, file_path):
     import json
@@ -25,18 +25,18 @@ async def build_subscriptions(ws):
                                        "User-Registral.sol/UserRegistrar.json")
     return [
         registrar_contract.events.ScoreUpdated.create_subscription(
-            label='score-updated',
-            handler=lambda event: route_event('ScoreUpdated', event)
+            label='score-update',
+            handler=lambda event: route_event(event)
         )
     ]
 
 
 async def listen_websocket():
     async with AsyncWeb3(WebSocketProvider(settings.WEB3_WEBSOCKET_URL)) as ws:
-        subscriptions = await build_subscriptions(ws);
+        subscriptions = await build_subscriptions(ws)
 
         logger.info(f"Subscribing to {len(subscriptions)} events")
-        await ws.subscription_manager.subscribe(subscriptions);
+        await ws.subscription_manager.subscribe(subscriptions)
         logger.info("Listening...")
         await ws.subscription_manager.handle_subscriptions()
 

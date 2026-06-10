@@ -15,5 +15,4 @@ class Score(models.Model):
     score_val = models.IntegerField()
     last_update = models.BigIntegerField()
 
-class Config(models.Model):
-    last_block = models.BigIntegerField()
+

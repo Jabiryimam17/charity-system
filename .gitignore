@@ -1,0 +1,9 @@
+./.idea
+./backend/.env
+./blockchain/.env
+./blockchain/lib/
+./frontend/.env
+./frontend/.next/
+./frontend/node_modules/
+/backend/.venv/
+

@@ -1,6 +1,6 @@
 from .base import BaseEventHandler
 from apps.users.services import UserService
-class ScoreUpdatedHandler(BaseEventHandler):
+class ScoreUpdateHandler(BaseEventHandler):
     event_name =  "ScoreUpdated"
 
     def handle(self, event):
