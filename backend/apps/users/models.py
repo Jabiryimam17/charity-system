@@ -15,4 +15,14 @@ class Score(models.Model):
     score_val = models.IntegerField()
     last_update = models.BigIntegerField()
 
+class User(models.Model):
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    address_hash = models.CharField(max_length=42, unique=True)
+    password = models.CharField(max_length=255)
+    email = models.CharField(max_length=255, unique=True)
+    identity_steps=models.IntegerField(default=0)
+    auth_steps=models.IntegerField(default=0)
+
+
 
