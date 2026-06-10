@@ -1,9 +1,11 @@
 from django.utils import timezone
-from utils.email import send_email
+from apps.utils.email_manage import send_email
 from tasks import update_user_score_task
 from argon2 import PasswordHasher
 from apps.users.models import User
-from core.enums import AuthSteps, IdentityStep, Roles
+from apps.auth.enums import AuthSteps
+
+
 class UserService:
     @staticmethod
     def on_score_updated(user_address, score_id, delta, tx_hash, log_index, block_number, block_timestamp):
@@ -53,13 +55,18 @@ class UserService:
         user.auth_steps |= AuthSteps.EMAIL
         user.save()
         
-    def send_email_code(self, email):
+    def send_email_code(self, email:str):
         import random
         from django.utils import timezone
         from datetime import timedelta
         user = User.objects.get(email=email)
+        if user is None or user.auth_steps & AuthSteps.EMAIL:
+            return
         code = f"{random.randint(0, 999999):06d}"
         user.email_code = code
         user.email_code_expiry = timezone.now() + timedelta(minutes=10)
-        user.save()
+        if send_email(code, email): user.save()
+        else: print(f"Error occurred while sending email: {email}")
+
+
 

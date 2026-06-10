@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 class ScoreEvents(models.Model):
     tx_hash = models.CharField(max_length=42)
@@ -26,6 +27,8 @@ class User(models.Model):
     auth_steps=models.IntegerField(default=0)
     email_code = models.CharField(max_length=6, default=None, null=True)
     email_code_expiry = models.DateTimeField(null=True)
+    totp_secret = models.CharField(max_length=255, default=None, null=True)
+
 
 
 
