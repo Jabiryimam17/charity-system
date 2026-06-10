@@ -21,8 +21,11 @@ class User(models.Model):
     address_hash = models.CharField(max_length=42, unique=True)
     password = models.CharField(max_length=255)
     email = models.CharField(max_length=255, unique=True)
+    phone_number = models.CharField(max_length=255, unique=True, null=True)
     identity_steps=models.IntegerField(default=0)
     auth_steps=models.IntegerField(default=0)
+    email_code = models.CharField(max_length=6, default=None, null=True)
+    email_code_expiry = models.DateTimeField(null=True)
 
 
 
