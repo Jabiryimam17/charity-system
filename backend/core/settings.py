@@ -138,3 +138,7 @@ OTP_WEBAUTHN_ALLOWED_ORIGINS = ["http://localhost:3000"]
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+
+# gcp cloud vision settings
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.join(BASE_DIR, "gcloud-key.json")
