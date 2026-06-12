@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="62c7a4b6-aac0-495a-a7d3-9c5761bf3c95" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/home/jabir/WebstormProjects/charity-system" value="3EeszgwYaJf4NUmafHsf4b6i5RU" />
+    </persistenceIdMap>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="13132" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Jabiryimam17&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/foundry-rs/forge-std&quot;,
+    &quot;accountId&quot;: &quot;e00bf4ff-ab1f-4ad0-85f8-7c309791e1ff&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.1951670752913588" />
+      <entry key="MS500" value="2.915494984302223" />
+      <entry key="S2" value="4.303460077581132" />
+      <entry key="S5" value="4.704674951333055" />
+      <entry key="S10" value="4.964152108907913" />
+      <entry key="S30" value="8.640996692640478" />
+      <entry key="S60" value="16.50856877365152" />
+      <entry key="M2" value="30.788919702104785" />
+      <entry key="M5" value="74.94831661215956" />
+      <entry key="M10" value="149.48251479412224" />
+      <entry key="M15" value="205.6980136411847" />
+      <entry key="M30" value="313.56162802483396" />
+      <entry key="H1" value="463.97841859642136" />
+      <entry key="H2" value="768.6520546410993" />
+      <entry key="H4" value="1310.3607180867134" />
+      <entry key="D1" value="2683.031456222957" />
+      <entry key="W1" value="3126.431717314107" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="6.594505200362794E-94" />
+      <entry key="S2" value="5.3894203703950736E-24" />
+      <entry key="S5" value="6.405152169465976E-10" />
+      <entry key="S10" value="3.5049264892028874E-5" />
+      <entry key="S30" value="0.06349431706456674" />
+      <entry key="S60" value="0.4759745758272034" />
+      <entry key="M2" value="1.3892095488649454" />
+      <entry key="M5" value="3.5562872383094484" />
+      <entry key="M10" value="8.46229328250027" />
+      <entry key="M15" value="13.915618801774603" />
+      <entry key="M30" value="28.31296079986931" />
+      <entry key="H1" value="53.12149701680186" />
+      <entry key="H2" value="99.80209278542974" />
+      <entry key="H4" value="173.49142816947267" />
+      <entry key="D1" value="342.45218417118247" />
+      <entry key="W1" value="394.3244451344531" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.1295313887519587" />
+      <entry key="MS500" value="2.8726758170704434" />
+      <entry key="S2" value="4.286101107463805" />
+      <entry key="S5" value="4.6969413195381415" />
+      <entry key="S10" value="4.960025229795289" />
+      <entry key="S30" value="8.699610214162684" />
+      <entry key="S60" value="16.973804139230868" />
+      <entry key="M2" value="32.16322206471585" />
+      <entry key="M5" value="78.48654010751478" />
+      <entry key="M10" value="157.9153266131615" />
+      <entry key="M15" value="219.57713250000458" />
+      <entry key="M30" value="341.8332088890087" />
+      <entry key="H1" value="517.058432865915" />
+      <entry key="H2" value="868.412291934023" />
+      <entry key="H4" value="1483.8138040518224" />
+      <entry key="D1" value="3025.4704524608687" />
+      <entry key="W1" value="3520.753978005476" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3EeszgwYaJf4NUmafHsf4b6i5RU" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectSessionTemplates">
+    <option name="inlineTemplate">
+      <template>
+        <option name="modeId" value="InlineAgent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="LOCAL" />
+      </template>
+    </option>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.webauthn_service.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "block-kyc",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/jabir/WebstormProjects/charity-system/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.intellij.reactbuddy.reactComponents" value="false" />
+        <entry key="com.intellij.reactbuddy.reactInspector" value="false" />
+        <entry key="com.intellij.reactbuddy.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/apps/auth" />
+      <recent name="$PROJECT_DIR$/backend/apps" />
+      <recent name="$PROJECT_DIR$/backend/templates" />
+      <recent name="$PROJECT_DIR$/backend/utils" />
+      <recent name="$PROJECT_DIR$/backend/apps/users" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.25134.101" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62c7a4b6-aac0-495a-a7d3-9c5761bf3c95" name="Changes" comment="" />
+      <created>1780550636621</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780550636621</updated>
+      <workItem from="1780550637610" duration="3741000" />
+      <workItem from="1780554548418" duration="7587000" />
+      <workItem from="1780657253925" duration="779000" />
+      <workItem from="1780825975288" duration="4680000" />
+      <workItem from="1780834102273" duration="4368000" />
+      <workItem from="1780895745261" duration="3743000" />
+      <workItem from="1780902019697" duration="6293000" />
+      <workItem from="1780981903709" duration="1016000" />
+      <workItem from="1781067545809" duration="13885000" />
+      <workItem from="1781154350334" duration="11058000" />
+      <workItem from="1781241215897" duration="2634000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="back-kyc" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="back-kyc" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
