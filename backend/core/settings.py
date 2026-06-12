@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_otp',
+    'django_otp_webauthn'
 ]
 
 MIDDLEWARE = [
@@ -46,10 +48,16 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_otp.middleware.OTPMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+# AUTHENTICATION_BACKENDS = [
+#     "django.contrib.auth.backends.ModelBackend",
+#     "django_otp_webauthn.backends.WebAuthnBackend",
+# ]
 ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
@@ -119,6 +127,11 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = f'Charity App <{EMAIL_HOST_USER}>'
+
+# webauthn settings
+OTP_WEBAUTHN_RP_ID = os.environ.get('WEBAUTHN_RP_ID')
+OTP_WEBAUTHN_RP_NAME = "Charity App"
+OTP_WEBAUTHN_ALLOWED_ORIGINS = ["http://localhost:3000"]
 
 
 # Static files (CSS, JavaScript, Images)

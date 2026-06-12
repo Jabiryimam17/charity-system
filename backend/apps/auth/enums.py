@@ -10,8 +10,9 @@ class AuthSteps(IntFlag):
     EMAIL = 1 << 0
     WALLET = 1 << 1
     TOTP = 1 << 2
-    SMS = 1 << 3
-    HARDWARE_KEY = 1 << 4
+    WEBAUTHN = 1 << 3
+    # SMS = 1 << 3
+    # HARDWARE_KEY = 1 << 4
 
 class Roles(IntFlag):
     NONE = 0

@@ -17,6 +17,7 @@ class Score(models.Model):
     last_update = models.BigIntegerField()
 
 class User(models.Model):
+    id = models.BigAutoField(primary_key=True)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     address_hash = models.CharField(max_length=42, unique=True)
@@ -28,6 +29,11 @@ class User(models.Model):
     email_code = models.CharField(max_length=6, default=None, null=True)
     email_code_expiry = models.DateTimeField(null=True)
     totp_secret = models.CharField(max_length=255, default=None, null=True)
+    def get_full_name(self):
+        return f"{self.first_name} {self.last_name}"
+    def get_username(self):
+        return self.email
+
 
 
 
