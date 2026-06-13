@@ -4,6 +4,12 @@ from pycparser import parse_file
 
 client = vision.ImageAnnotatorClient()
 
+def extract_insight(image_bytes: bytes) -> str:
+    image = vision.Image(content=image_bytes)
+    response = client.document_text_detection(image=image)
+    if response.error.message:
+        raise Exception(f"Google Vision API error: {response.error.message}")
+    return response.full_text_annotation.text if response.full_text_annotation else ""
 
 def extract_id_fields(image_bytes: bytes) -> dict:
     """
@@ -14,17 +20,14 @@ def extract_id_fields(image_bytes: bytes) -> dict:
     save into VerifiedIdentity.
     """
 
-    image = vision.Image(content=image_bytes)
-    response = client.document_text_detection(image=image)
-    if response.error.message:
-        raise ValueError(response.error.message)
 
-    raw = response.full_text_annotation.text if response.full_text_annotation else ""
+
+    raw = extract_insight(image_bytes)
 
     fields = parse_fields(raw)
 
     fields["raw_text"] = raw
-    fields["confidence"] = score_confidece(fields)
+    fields["confidence"] = score_confidence(fields)
     fields["status"] = "verified" if fields["confidence"] >= 0.75 else "review"
     return fields
 

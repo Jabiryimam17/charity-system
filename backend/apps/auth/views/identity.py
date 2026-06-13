@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from ..models import VerifiedIdentity
-from ..services.vision import extract_id_fields
+from apps.auth.services.identity_verification import verify_identity
 from ..enums import IdentityStep
 
 @login_required
@@ -15,7 +15,7 @@ def verify_id(request):
     image_file = request.FILES["id_image"]
     image_bytes = image_file.read()
     try:
-        fields = extract_id_fields(image_bytes)
+        fields = verify_identity(image_bytes)
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=400)
 

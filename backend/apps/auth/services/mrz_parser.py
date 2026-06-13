@@ -1,4 +1,3 @@
-import re
 
 
 def parse_mrz(mrz):
@@ -8,7 +7,7 @@ def parse_mrz(mrz):
         Line1: type + country + name (44 chars)
         Line2: doc_no + nationality + DOB + sex + expiry + personal_no
     """
-    lines = [l.strip().replace(" ", "") for l in mrz.splitlines() if len(l.strip()) >= 30]
+    lines = [l.replace(" ", "") for l in mrz.splitlines() if len(l.strip()) >= 30]
     td3 = [l for l in lines if l.startswith("<TD3>") and l.endswith("</TD3>") and len(l) == 44]
     if len(td3) >= 2:
         l1, l2 = td3[0], td3[1]
