@@ -47,61 +47,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.1951670752913588" />
-      <entry key="MS500" value="2.915494984302223" />
-      <entry key="S2" value="4.303460077581132" />
-      <entry key="S5" value="4.704674951333055" />
-      <entry key="S10" value="4.964152108907913" />
-      <entry key="S30" value="8.640996692640478" />
-      <entry key="S60" value="16.50856877365152" />
-      <entry key="M2" value="30.788919702104785" />
-      <entry key="M5" value="74.94831661215956" />
-      <entry key="M10" value="149.48251479412224" />
-      <entry key="M15" value="205.6980136411847" />
-      <entry key="M30" value="313.56162802483396" />
-      <entry key="H1" value="463.97841859642136" />
-      <entry key="H2" value="768.6520546410993" />
-      <entry key="H4" value="1310.3607180867134" />
-      <entry key="D1" value="2683.031456222957" />
-      <entry key="W1" value="3126.431717314107" />
+      <entry key="MS100" value="1.2645978617299953" />
+      <entry key="MS500" value="3.0847836465655694" />
+      <entry key="S2" value="4.621998827405885" />
+      <entry key="S5" value="8.417318133531978" />
+      <entry key="S10" value="14.39060460214451" />
+      <entry key="S30" value="26.66767482959867" />
+      <entry key="S60" value="44.00925315423609" />
+      <entry key="M2" value="82.17665621539007" />
+      <entry key="M5" value="159.84911505459004" />
+      <entry key="M10" value="238.0312698432976" />
+      <entry key="M15" value="302.9816420829349" />
+      <entry key="M30" value="454.77075159742117" />
+      <entry key="H1" value="659.3031639549116" />
+      <entry key="H2" value="997.6403600628856" />
+      <entry key="H4" value="1564.532448968146" />
+      <entry key="D1" value="3023.7194005042857" />
+      <entry key="W1" value="3504.0525455745164" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="6.594505200362794E-94" />
-      <entry key="S2" value="5.3894203703950736E-24" />
-      <entry key="S5" value="6.405152169465976E-10" />
-      <entry key="S10" value="3.5049264892028874E-5" />
-      <entry key="S30" value="0.06349431706456674" />
-      <entry key="S60" value="0.4759745758272034" />
-      <entry key="M2" value="1.3892095488649454" />
-      <entry key="M5" value="3.5562872383094484" />
-      <entry key="M10" value="8.46229328250027" />
-      <entry key="M15" value="13.915618801774603" />
-      <entry key="M30" value="28.31296079986931" />
-      <entry key="H1" value="53.12149701680186" />
-      <entry key="H2" value="99.80209278542974" />
-      <entry key="H4" value="173.49142816947267" />
-      <entry key="D1" value="342.45218417118247" />
-      <entry key="W1" value="394.3244451344531" />
+      <entry key="MS100" value="1.177568205978708E-246" />
+      <entry key="MS500" value="8.499163439958156E-50" />
+      <entry key="S2" value="1.1035943718488068E-12" />
+      <entry key="S5" value="3.1530742877745496E-5" />
+      <entry key="S10" value="0.009769600792077065" />
+      <entry key="S30" value="0.5275736308217023" />
+      <entry key="S60" value="1.7008575209933237" />
+      <entry key="M2" value="3.3829068314925257" />
+      <entry key="M5" value="5.726858671729026" />
+      <entry key="M10" value="8.381696625776915" />
+      <entry key="M15" value="11.653751961119672" />
+      <entry key="M30" value="23.499713144389457" />
+      <entry key="H1" value="47.747972791780185" />
+      <entry key="H2" value="94.65328206227123" />
+      <entry key="H4" value="170.28308304500825" />
+      <entry key="D1" value="349.9769558209402" />
+      <entry key="W1" value="406.41921741552676" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.1295313887519587" />
-      <entry key="MS500" value="2.8726758170704434" />
-      <entry key="S2" value="4.286101107463805" />
-      <entry key="S5" value="4.6969413195381415" />
-      <entry key="S10" value="4.960025229795289" />
-      <entry key="S30" value="8.699610214162684" />
-      <entry key="S60" value="16.973804139230868" />
-      <entry key="M2" value="32.16322206471585" />
-      <entry key="M5" value="78.48654010751478" />
-      <entry key="M10" value="157.9153266131615" />
-      <entry key="M15" value="219.57713250000458" />
-      <entry key="M30" value="341.8332088890087" />
-      <entry key="H1" value="517.058432865915" />
-      <entry key="H2" value="868.412291934023" />
-      <entry key="H4" value="1483.8138040518224" />
-      <entry key="D1" value="3025.4704524608687" />
-      <entry key="W1" value="3520.753978005476" />
+      <entry key="MS100" value="1.111271905782128" />
+      <entry key="MS500" value="2.9707026146197157" />
+      <entry key="S2" value="4.56767060874015" />
+      <entry key="S5" value="8.38479098077787" />
+      <entry key="S10" value="14.375984351512876" />
+      <entry key="S30" value="27.172428402015672" />
+      <entry key="S60" value="45.68391146634715" />
+      <entry key="M2" value="85.5284970644254" />
+      <entry key="M5" value="165.54283069747774" />
+      <entry key="M10" value="246.38082494776376" />
+      <entry key="M15" value="314.6024695867643" />
+      <entry key="M30" value="478.23445715408997" />
+      <entry key="H1" value="707.0129891515595" />
+      <entry key="H2" value="1092.2537093870467" />
+      <entry key="H4" value="1734.777885778449" />
+      <entry key="D1" value="3373.6828933725383" />
+      <entry key="W1" value="3910.4695140472772" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -130,37 +130,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.webauthn_service.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "block-kyc",
-    "javascript.preferred.runtime.type.id": "node",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/home/jabir/WebstormProjects/charity-system/backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.webauthn_service.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;block-kyc&quot;,
+    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jabir/WebstormProjects/charity-system/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
