@@ -1,4 +1,3 @@
-import os
 """
 Django settings for core project.
 
@@ -10,11 +9,13 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
-
+import os
 from pathlib import Path
-
+from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+ENV_PATH = os.path.join(BASE_DIR, '.env')
+load_dotenv(ENV_PATH)
 
 
 # Quick-start development settings - unsuitable for production
@@ -39,8 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_otp',
-    'django_otp_webauthn'
+    'django_otp_webauthn',
     'apps.blockchain',
+    'apps.users',
+    'apps.auths',
 ]
 
 MIDDLEWARE = [
@@ -81,14 +84,24 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME', 'charity'),
+        'USER': os.getenv('DB_USER', 'postgres'),
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),
+        # If DB_HOST isn't in .env, leaving it completely out or setting to None
+        # forces Postgres to use local Unix sockets (fixing the test crash!)
+        'HOST': os.getenv('DB_HOST', None),
+        'PORT': os.getenv('DB_PORT', '5432'),
+        'OPTIONS': {
+            'options': '-c search_path=charity_app,public'
+        },
+        'TEST': {
+            'NAME': 'test_charity_app'
+        }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators

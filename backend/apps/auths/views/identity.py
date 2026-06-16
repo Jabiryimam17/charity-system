@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from ..models import VerifiedIdentity
-from apps.auth.services.identity_verification import verify_identity
+from apps.auths.services.identity_verification import verify_identity
 from ..enums import IdentityStep
 
 @login_required

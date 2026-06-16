@@ -3,7 +3,7 @@ from apps.utils.email_manage import send_email
 from tasks import update_user_score_task
 from argon2 import PasswordHasher
 from apps.users.models import User
-from apps.auth.enums import AuthSteps
+from apps.auths.enums import AuthSteps
 
 
 class UserService:

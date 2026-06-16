@@ -5,116 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62c7a4b6-aac0-495a-a7d3-9c5761bf3c95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/blockchain/block_tracker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/blockchain/events_abi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/blockchain/handlers/UserRegistrarHandlers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/blockchain/managment/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/blockchain/managment/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/blockchain/managment/commands/run_polling_listener.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/blockchain/managment/commands/run_ws_listener.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/blockchain/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/.github/workflows/test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/foundry.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/foundry.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/.github/CODEOWNERS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/.github/dependabot.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/.github/workflows/ci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/.github/workflows/sync.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/LICENSE-APACHE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/LICENSE-MIT" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/RELEASE_CHECKLIST.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/foundry.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/scripts/vm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/Base.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/Config.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/LibVariable.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/Script.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdAssertions.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdChains.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdCheats.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdConfig.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdConstants.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdError.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdInvariant.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdJson.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdMath.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdStorage.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdStyle.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdToml.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/StdUtils.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/Test.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/Vm.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/console.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/console2.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/interfaces/IERC1155.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/interfaces/IERC165.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/interfaces/IERC20.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/interfaces/IERC4626.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/interfaces/IERC6909.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/interfaces/IERC721.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/interfaces/IERC7540.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/interfaces/IERC7575.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/interfaces/IMulticall3.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/src/safeconsole.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/CommonBase.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/Config.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/LibVariable.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/StdAssertions.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/StdChains.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/StdCheats.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/StdConstants.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/StdError.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/StdJson.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/StdMath.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/StdStorage.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/StdStyle.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/StdToml.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/StdUtils.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/Vm.t.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/compilation/CompilationScript.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/compilation/CompilationScriptBase.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/compilation/CompilationTest.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/compilation/CompilationTestBase.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/fixtures/broadcast.log.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/fixtures/config.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/fixtures/test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/lib/forge-std/test/fixtures/test.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain/src/User-Registral.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/AGENTS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/CLAUDE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/globals.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/eslint.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/next.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/postcss.config.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/file.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/globe.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/next.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/vercel.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/window.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/blockchain/listeners/polling.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/blockchain/listeners/polling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/blockchain/listeners/websocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/blockchain/listeners/websocket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/blockchain/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/blockchain/routers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/enums.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/enums.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/services/digital_id.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/services/digital_id.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/services/identity_verification.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/services/identity_verification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/services/mrz_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/services/mrz_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/services/totp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/services/totp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/services/vision.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/services/vision.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/views/documents.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/documents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/views/identity.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/identity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/views/totp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/totp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auth/views/webauthn.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/webauthn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/blockchain/handlers/score_updated.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/users/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/users/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/users/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/users/tests/test_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/core/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,73 +58,73 @@
     &quot;assignee&quot;: &quot;Jabiryimam17&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/foundry-rs/forge-std&quot;,
-    &quot;accountId&quot;: &quot;e00bf4ff-ab1f-4ad0-85f8-7c309791e1ff&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Jabiryimam17/charity-system.git",
+    "accountId": "e00bf4ff-ab1f-4ad0-85f8-7c309791e1ff"
   }
-}</component>
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.2066391922559974" />
-      <entry key="MS500" value="2.072256506979678" />
-      <entry key="S2" value="2.690169489104212" />
-      <entry key="S5" value="2.86786223168808" />
-      <entry key="S10" value="2.932471389183668" />
-      <entry key="S30" value="2.9808646127327285" />
-      <entry key="S60" value="3.5219160973604295" />
-      <entry key="M2" value="12.108051665812145" />
-      <entry key="M5" value="70.15630167638558" />
-      <entry key="M10" value="158.7742628003625" />
-      <entry key="M15" value="232.40872590318307" />
-      <entry key="M30" value="400.6807532997445" />
-      <entry key="H1" value="621.851209836428" />
-      <entry key="H2" value="971.6783870733179" />
-      <entry key="H4" value="1546.5757638440662" />
-      <entry key="D1" value="3026.0190382887604" />
-      <entry key="W1" value="3514.445082616126" />
+      <entry key="MS100" value="2.3628578115886353E-21" />
+      <entry key="MS500" value="8.482450732652789E-5" />
+      <entry key="S2" value="0.1986306830421721" />
+      <entry key="S5" value="1.5692808444643027" />
+      <entry key="S10" value="4.349990838876632" />
+      <entry key="S30" value="14.480865006988452" />
+      <entry key="S60" value="24.532114155889285" />
+      <entry key="M2" value="35.275450471073476" />
+      <entry key="M5" value="54.75225863726204" />
+      <entry key="M10" value="79.8818008567271" />
+      <entry key="M15" value="104.10400528519943" />
+      <entry key="M30" value="198.54442337971514" />
+      <entry key="H1" value="423.2927889710704" />
+      <entry key="H2" value="828.8966814614075" />
+      <entry key="H4" value="1477.6575153460171" />
+      <entry key="D1" value="3230.238443073238" />
+      <entry key="W1" value="3839.128806068038" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.0537004998950742E-195" />
-      <entry key="S2" value="2.967556084054526E-49" />
-      <entry key="S5" value="8.202409787313404E-20" />
-      <entry key="S10" value="6.031380776666479E-10" />
-      <entry key="S30" value="0.002676488662515223" />
-      <entry key="S60" value="0.14111637761875334" />
-      <entry key="M2" value="1.1980159862353132" />
-      <entry key="M5" value="5.034352835227232" />
-      <entry key="M10" value="9.351738183970683" />
-      <entry key="M15" value="13.198453094598523" />
-      <entry key="M30" value="25.42073904154628" />
-      <entry key="H1" value="49.83768298888707" />
-      <entry key="H2" value="96.89202683612233" />
-      <entry key="H4" value="172.94457700400216" />
-      <entry key="D1" value="354.84130437798734" />
-      <entry key="W1" value="412.23093197884504" />
+      <entry key="MS100" value="9.018012368849025E-100" />
+      <entry key="MS500" value="1.5547294139341266E-20" />
+      <entry key="S2" value="1.3343466698581027E-5" />
+      <entry key="S5" value="0.01588831819821646" />
+      <entry key="S10" value="0.176476687937654" />
+      <entry key="S30" value="0.9984431245954084" />
+      <entry key="S60" value="1.8671169209288148" />
+      <entry key="M2" value="2.9014599533590166" />
+      <entry key="M5" value="4.397531200868584" />
+      <entry key="M10" value="6.416018777880404" />
+      <entry key="M15" value="8.620556443310667" />
+      <entry key="M30" value="16.382826656453403" />
+      <entry key="H1" value="35.87011779312628" />
+      <entry key="H2" value="79.7669065041923" />
+      <entry key="H4" value="158.23516700268672" />
+      <entry key="D1" value="369.091875464277" />
+      <entry key="W1" value="440.4118422777678" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.0938624143023246" />
-      <entry key="MS500" value="2.0340859125588406" />
-      <entry key="S2" value="2.677548848384572" />
-      <entry key="S5" value="2.8624506029138934" />
-      <entry key="S10" value="2.9296991315676277" />
-      <entry key="S30" value="2.982530932641804" />
-      <entry key="S60" value="3.660527652021294" />
-      <entry key="M2" value="13.296283116822565" />
-      <entry key="M5" value="75.1688588028028" />
-      <entry key="M10" value="168.09933555855494" />
-      <entry key="M15" value="245.57810056918947" />
-      <entry key="M30" value="426.06783721526597" />
-      <entry key="H1" value="671.6520833194282" />
-      <entry key="H2" value="1068.531219676114" />
-      <entry key="H4" value="1719.483021161308" />
-      <entry key="D1" value="3380.846856838601" />
-      <entry key="W1" value="3926.67375723905" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000808885561498" />
+      <entry key="S2" value="1.188896805521437" />
+      <entry key="S5" value="2.485441557561643" />
+      <entry key="S10" value="5.311968825838404" />
+      <entry key="S30" value="16.19002526707623" />
+      <entry key="S60" value="27.147685691351608" />
+      <entry key="M2" value="38.994666392376516" />
+      <entry key="M5" value="60.04162170842325" />
+      <entry key="M10" value="87.22305431489424" />
+      <entry key="M15" value="113.66247338480129" />
+      <entry key="M30" value="215.87801451270226" />
+      <entry key="H1" value="460.119304282324" />
+      <entry key="H2" value="909.6217308342389" />
+      <entry key="H4" value="1636.8535317964454" />
+      <entry key="D1" value="3600.31542844326" />
+      <entry key="W1" value="4280.5381125895565" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -245,6 +156,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique.executor": "Run",
+    "Python tests.Python tests for apps.users.tests.test_models.test_email_must_be_unique.executor": "Run",
+    "Python tests.Python tests for apps.users.tests.test_models.test_user_creation.executor": "Run",
+    "Python tests.pytest for apps.users.tests.test_models.executor": "Run",
+    "Python.settings.executor": "Run",
     "Python.webauthn_service.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -253,7 +169,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Merging bb-kyc",
+    "git-widget-placeholder": "bb-kyc",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/home/jabir/WebstormProjects/charity-system/backend",
@@ -287,12 +203,92 @@
       <recent name="$PROJECT_DIR$/backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/backend/apps/auth" />
       <recent name="$PROJECT_DIR$/backend/apps" />
       <recent name="$PROJECT_DIR$/backend/templates" />
       <recent name="$PROJECT_DIR$/backend/utils" />
-      <recent name="$PROJECT_DIR$/backend/apps/users" />
     </key>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest for apps.users.tests.test_models">
+    <configuration name="Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="charity-system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;apps.users.tests.test_models.test_address_hash_must_be_unique&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for apps.users.tests.test_models.test_email_must_be_unique" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="charity-system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;apps.users.tests.test_models.test_email_must_be_unique&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for apps.users.tests.test_models.test_user_creation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="charity-system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;apps.users.tests.test_models.test_user_creation&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for apps.users.tests.test_models" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="charity-system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/backend/.venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;apps.users.tests.test_models&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for apps.users.tests.test_models" />
+        <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique" />
+        <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_email_must_be_unique" />
+        <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_user_creation" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -362,5 +358,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/apps/users/tests/test_models.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,9 +1,8 @@
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
-from django.utils import timezone
-from apps.auth.models import DocumentReview
-from apps.auth.services.vision import extract_insight
+from apps.auths.models import DocumentReview
+from apps.auths.services.vision import extract_insight
 
 
 @login_required
