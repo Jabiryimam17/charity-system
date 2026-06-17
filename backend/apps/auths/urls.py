@@ -11,4 +11,5 @@ urlpatterns = [
     path("identity/verify-id/", views.verify_id, name="verify-id"),
     path("documents/submit/", views.submit_document, name="submit-document"),
     path("documents/status/<int:doc_id>/", views.document_status, name="document-status"),
+    path("email-otp/register/", views.register_user, name="register-user"),
 ]
