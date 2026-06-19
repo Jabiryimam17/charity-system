@@ -14,7 +14,9 @@ def get_totp_uri(secret: str, email: str, issuer: str="Charity App")->str:
 def generate_qr_base64(uri: str)->str:
 
     """Returns base64 PNG to embed directly in HTML as <img src="data:image/png;base64,..." alt="QR Code">"""
-    qr = qrcode.make(uri)
+    qr = qrcode.QRCode()
+    qr.add_data(uri)
+    qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")
     output = BytesIO()
     img.save(output, format="PNG")

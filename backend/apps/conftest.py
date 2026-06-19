@@ -70,6 +70,7 @@ def wallet_user(db, wallet):
     from argon2 import PasswordHasher
     address_hash = Web3.keccak(text=wallet["address"]).hex()
     user = User.objects.create(
+        username="alice@example.com",
         first_name="alice",
         last_name="smith",
         email='alice@example.com',
@@ -117,6 +118,7 @@ def admin_client(api_client, admin_user):
 @pytest.fixture
 def user(db):
     return User.objects.create_user(
+        username="alice@example.com",
         first_name="alice",
         last_name="smith",
         email="alice@example.com",
@@ -127,6 +129,7 @@ def user(db):
 @pytest.fixture
 def admin_user(db):
     return User.objects.create_superuser(
+        username="admin@example.com",
         first_name="admin",
         last_name='admin',
         email='admin@example.com',
@@ -137,6 +140,7 @@ def admin_user(db):
 @pytest.fixture
 def other_user(db):
     return User.objects.create_user(
+        username="other@example.com",
         first_name="other",
         last_name="user",
         email="other@example.com",

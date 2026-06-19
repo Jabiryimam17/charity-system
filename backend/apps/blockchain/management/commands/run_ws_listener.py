@@ -1,4 +1,4 @@
-from django.core.managment.base import BaseCommand
+from django.core.management.base import BaseCommand
 from apps.blockchain.listeners.websocket import run_websocket_listener
 
 

@@ -23,7 +23,7 @@ class BlockTracker:
 
         from apps.blockchain.models import ListenerState
 
-        state, created = ListenerState().objects.get_or_create(name="block_tracker",
+        state, created = ListenerState.objects.get_or_create(name="block_tracker",
                                                                defaults={"last_block": start_block})
         if created:
             logger.info("Created new block tracker state")
@@ -48,7 +48,9 @@ class BlockTracker:
 
         """Return a range of blocks to track"""
         if settings.BLOCK_TRACKER_RANGE < 1: raise ValueError("BLOCK_TRACKER_RANGE must be greater than 0")
-        return range(self.last_block, min(self.last_block + settings.BLOCK_TRACKER_RANGE, self.socket.eth.block_number))
+        current_block = self.socket.eth.block_number
+        to_block = min(self.last_block + settings.BLOCK_TRACKER_RANGE, current_block)
+        return self.last_block, to_block
 
     def reset(self, block=None):
         """Manually reset the block tracker to a specific block number"""

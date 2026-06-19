@@ -108,18 +108,36 @@ def test_invalid_signature(api_client, wallet_user_payload):
     assert response.status_code == 400
     assert response.data['success'] == False
     assert "Invalid signature" in response.data['message']
-# @pytest.mark.django_db
-# def test_duplicate_wallet_returns_400(api_client, wallet_user_payload):
-#     api_client.post(REGISTER_URL,{
-#         'user':wallet_user_payload
-#     }, format='json')
-#     wallet_user_payload['email']='bob@example.com'
-#     wallet_user_payload['password']='test123pass'
-#     wallet_user_payload['phone_number']='+251923456789'
-#     response = api_client.post(REGISTER_URL,{
-#         'user':wallet_user_payload
-#     }, format='json')
-#     assert response.status_code == 400
+@pytest.mark.django_db
+def test_duplicate_email_returns_400(api_client, wallet_user_payload, second_wallet):
+    api_client.post(REGISTER_URL,{
+        'user':wallet_user_payload
+    }, format='json')
+    
+    # New wallet, but same email
+    wallet_user_payload['user_address'] = second_wallet['address']
+    wallet_user_payload['message'] = second_wallet['message']
+    wallet_user_payload['signature'] = second_wallet['signature']
+    
+    response = api_client.post(REGISTER_URL,{
+        'user':wallet_user_payload
+    }, format='json')
+    assert response.status_code == 400
+    assert "email already exists" in response.data['message']
+
+@pytest.mark.django_db
+def test_duplicate_wallet_returns_400(api_client, wallet_user_payload):
+    api_client.post(REGISTER_URL,{
+        'user':wallet_user_payload
+    }, format='json')
+    
+    # Different email, but same wallet
+    wallet_user_payload['email'] = 'bob@example.com'
+    response = api_client.post(REGISTER_URL,{
+        'user':wallet_user_payload
+    }, format='json')
+    assert response.status_code == 400
+    assert "wallet already exists" in response.data['message']
 @pytest.mark.django_db
 def test_signature_from_different_wallet_returns_400(api_client, wallet_user_payload, second_wallet):
     wallet_user_payload['signature'] = second_wallet['signature']

@@ -6,25 +6,41 @@ from apps.utils.email_manage import send_email
 
 class EmailOtpService:
     @staticmethod
-    def register_user(self, user_address: str, message: str, signature: str, email: str, first_name: str,
+    def register_user(user_address: str, message: str, signature: str, email: str, first_name: str,
                       last_name: str, password: str, phone_number: str):
         from apps.users.models import User
         from web3 import Web3
         from eth_account import Account
         from eth_account.messages import encode_defunct
+        
+        if not all([user_address, message, signature, email, password]):
+            return {"success": False, "message": "Missing required fields", "data": "", "status_code": 400}
+
         if not Web3.is_address(user_address):
             return {"success": False, "message": "Invalid Ethereum address", "data": "", "status_code": 400}
+        
         address_hash = Web3.keccak(text=user_address).hex()
+        
+        # Check for duplicate email
+        if User.objects.filter(email=email).exists():
+            return {"success": False, "message": "User with this email already exists", "data": "", "status_code": 400}
+        
+        # Check for duplicate wallet
+        if User.objects.filter(address_hash=address_hash).exists():
+            return {"success": False, "message": "User with this wallet already exists", "data": "", "status_code": 400}
+
         signed_message = encode_defunct(text=message)
         try:
             recover_address = Account.recover_message(signed_message, signature=signature)
             recover_address_hash = Web3.keccak(text=recover_address).hex()
-        except Exception as e:
-            return {"success": False, "message": "Invalid signature", "data": "", "status_code": 400}
+        except Exception:
+            return {"success": False, "message": "Invalid signature format", "data": "", "status_code": 400}
+            
         if recover_address_hash != address_hash:
             return {"success": False, "message": "Invalid signature", "data": "", "status_code": 400}
 
         user = User.objects.create(
+            username=email,
             first_name=first_name,
             last_name=last_name,
             address_hash=address_hash,
@@ -37,7 +53,7 @@ class EmailOtpService:
         return {"success": True, "message": "User registered successfully", "data": "", "status_code": 200}
 
     @staticmethod
-    def login(self, email: str, password: str):
+    def login(email: str, password: str):
         try:
             user = User.objects.get(email=email)
         except User.DoesNotExist:
@@ -55,27 +71,37 @@ class EmailOtpService:
         }, "status_code": 200}
 
     @staticmethod
-    def verify_email(self, email: str, code: str) -> dict:
-        user = User.objects.get(email=email)
-        if user.email_code != code or user.email_code_expiry < timezone.now():
-            return {"success": False, "message": "Invalid or expired verification code", "data": "",
-                    "status_code": 400}
+    def verify_email(email: str, code: str) -> dict:
+        try:
+            user = User.objects.get(email=email)
+        except User.DoesNotExist:
+            return {"success": False, "message": "User not found", "data": "", "status_code": 400}
+            
+        if not user.email_code or user.email_code != code:
+            return {"success": False, "message": "Invalid verification code", "data": "", "status_code": 400}
+            
+        if user.email_code_expiry < timezone.now():
+            return {"success": False, "message": "Expired verification code", "data": "", "status_code": 400}
+            
         user.auth_steps |= AuthSteps.EMAIL
+        # Clear code after success
+        user.email_code = None
         user.save()
         return {"success": True, "message": "Email verified successfully", "data": "", "status_code": 200}
 
     @staticmethod
-    def send_email_code(self, email: str):
+    def send_email_code(email: str):
         import random
-        from django.utils import timezone
         from datetime import timedelta
-        user = User.objects.get(email=email)
-        if user is None:
-            return {"success": False, "message": "User not found", "data": "",
-                    "status_code": 400}
+        try:
+            user = User.objects.get(email=email)
+        except User.DoesNotExist:
+            return {"success": False, "message": "User not found", "data": "", "status_code": 400}
+            
         code = f"{random.randint(0, 999999):06d}"
         user.email_code = code
         user.email_code_expiry = timezone.now() + timedelta(minutes=10)
+        
         if send_email(code, email):
             user.save()
         else:
@@ -83,18 +109,18 @@ class EmailOtpService:
         return {"success": True, "message": "Verification code sent", "data": "", "status_code": 200}
 
     @staticmethod
-    def forget_password(self, email: str):
-        return self.send_email_code(email)
+    def forget_password(email: str):
+        return EmailOtpService.send_email_code(email)
 
     @staticmethod
-    def reset_password(self, email: str, password: str, code: str):
-        res = self.verify_email(email, code)
-        if res.success:
-            ph = PasswordHasher()
-            hashed_password = ph.hash(password)
-            User.objects.update_or_create(
-                email=email,
-                defaults={"password": hashed_password}
-            )
-            return {"success": True, "message": "Password reset successfully", "data": "", "status_code": 200}
-        return {"success": False, "message": "Invalid code or email", "data": "", "status_code": 400}
+    def reset_password(email: str, password: str, code: str):
+        res = EmailOtpService.verify_email(email, code)
+        if res["success"]:
+            try:
+                user = User.objects.get(email=email)
+                user.set_password(password)
+                user.save()
+                return {"success": True, "message": "Password reset successfully", "data": "", "status_code": 200}
+            except User.DoesNotExist:
+                return {"success": False, "message": "User not found", "data": "", "status_code": 400}
+        return res

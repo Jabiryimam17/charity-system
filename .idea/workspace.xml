@@ -5,21 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62c7a4b6-aac0-495a-a7d3-9c5761bf3c95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/apps/auths/tests/test_register_views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/blockchain/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/apps/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/charity-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/charity-system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/auths/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/apps/auths/services/email_otp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/services/email_otp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/auths/tests/test_views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/auths/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/auths/views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/services/totp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/services/totp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/tests/test_login_views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/tests/test_register_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/tests/test_register_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/apps/auths/views/email_otp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/email_otp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/views/totp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/totp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/views/webauthn.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/webauthn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/apps/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/core/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +27,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="15041" />
+    <option name="cachedIndexableFilesCount" value="15042" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -63,61 +58,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000001074463" />
-      <entry key="S2" value="1.0038505501868096" />
-      <entry key="S5" value="1.191600177394589" />
-      <entry key="S10" value="1.9520739258678552" />
-      <entry key="S30" value="6.104706743862456" />
-      <entry key="S60" value="11.170550061764406" />
-      <entry key="M2" value="17.513397030985264" />
-      <entry key="M5" value="30.24002020927851" />
-      <entry key="M10" value="46.47562564579605" />
-      <entry key="M15" value="62.737624213428276" />
-      <entry key="M30" value="122.65181637775551" />
-      <entry key="H1" value="274.9776849688397" />
-      <entry key="H2" value="634.8860453678843" />
-      <entry key="H4" value="1359.059999359069" />
-      <entry key="D1" value="4012.676761106189" />
-      <entry key="W1" value="5147.731258586429" />
+      <entry key="MS100" value="6.834331695669953E-14" />
+      <entry key="MS500" value="0.008067305504603831" />
+      <entry key="S2" value="1.3291104177174222" />
+      <entry key="S5" value="4.082077920883644" />
+      <entry key="S10" value="6.031713488284354" />
+      <entry key="S30" value="7.867081716661806" />
+      <entry key="S60" value="8.419626642577796" />
+      <entry key="M2" value="9.48085512859454" />
+      <entry key="M5" value="26.88365133735577" />
+      <entry key="M10" value="67.53648890347873" />
+      <entry key="M15" value="101.52554433609099" />
+      <entry key="M30" value="183.86339393159128" />
+      <entry key="H1" value="344.0841344565056" />
+      <entry key="H2" value="701.9045301385942" />
+      <entry key="H4" value="1424.6054325083517" />
+      <entry key="D1" value="4125.241446870279" />
+      <entry key="W1" value="5295.781622154212" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="4.195062674610443E-46" />
-      <entry key="MS500" value="8.405198262863174E-10" />
-      <entry key="S2" value="0.005535779171978082" />
-      <entry key="S5" value="0.15346686817234736" />
-      <entry key="S10" value="0.5347962950805446" />
-      <entry key="S30" value="1.7334575376872043" />
-      <entry key="S60" value="3.0769637225709423" />
-      <entry key="M2" value="4.9628955097460175" />
-      <entry key="M5" value="9.255276303467037" />
-      <entry key="M10" value="13.591051369740075" />
-      <entry key="M15" value="16.64580571062742" />
-      <entry key="M30" value="25.23085007527731" />
-      <entry key="H1" value="45.570022301229535" />
-      <entry key="H2" value="91.72482388201982" />
-      <entry key="H4" value="181.39669260397736" />
-      <entry key="D1" value="502.9024820904744" />
-      <entry key="W1" value="637.8879594362074" />
+      <entry key="MS100" value="1.0065244020646609" />
+      <entry key="MS500" value="1.4145288222602448" />
+      <entry key="S2" value="2.3636977436754623" />
+      <entry key="S5" value="3.0661919675080944" />
+      <entry key="S10" value="3.460838217484689" />
+      <entry key="S30" value="3.8005452511574864" />
+      <entry key="S60" value="3.897534765378574" />
+      <entry key="M2" value="3.956455594104996" />
+      <entry key="M5" value="4.896252800872133" />
+      <entry key="M10" value="9.020650623499607" />
+      <entry key="M15" value="13.396558052239952" />
+      <entry key="M30" value="24.68755817710573" />
+      <entry key="H1" value="46.38403204630933" />
+      <entry key="H2" value="92.73736768096596" />
+      <entry key="H4" value="182.6905209682507" />
+      <entry key="D1" value="510.5113863333261" />
+      <entry key="W1" value="649.910163534996" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.765712899446959E-43" />
-      <entry key="MS500" value="3.621007397339842E-9" />
-      <entry key="S2" value="0.014574050421654793" />
-      <entry key="S5" value="0.45427056849697894" />
-      <entry key="S10" value="1.8029110018722416" />
-      <entry key="S30" value="7.481254770796506" />
-      <entry key="S60" value="14.020673286291627" />
-      <entry key="M2" value="22.332147899553053" />
-      <entry key="M5" value="39.409121115561184" />
-      <entry key="M10" value="60.007140198263066" />
-      <entry key="M15" value="79.33369004459503" />
-      <entry key="M30" value="147.84015529186416" />
-      <entry key="H1" value="320.52190791480365" />
-      <entry key="H2" value="726.6956404268913" />
-      <entry key="H4" value="1540.7716948017076" />
-      <entry key="D1" value="4516.401954523897" />
-      <entry key="W1" value="5786.591438215736" />
+      <entry key="MS100" value="0.04161523518691819" />
+      <entry key="MS500" value="0.7030772710127622" />
+      <entry key="S2" value="3.186756646015243" />
+      <entry key="S5" value="6.820184447562059" />
+      <entry key="S10" value="9.289958496357809" />
+      <entry key="S30" value="11.588580569342723" />
+      <entry key="S60" value="12.275953801032687" />
+      <entry key="M2" value="13.415729041778313" />
+      <entry key="M5" value="31.76270388682946" />
+      <entry key="M10" value="76.53261578891798" />
+      <entry key="M15" value="114.89402331028003" />
+      <entry key="M30" value="208.51854360075478" />
+      <entry key="H1" value="390.44412510599045" />
+      <entry key="H2" value="794.714352426092" />
+      <entry key="H4" value="1607.5904094132097" />
+      <entry key="D1" value="4636.5666763511" />
+      <entry key="W1" value="5946.6625070865775" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -141,50 +136,63 @@
         <option name="targetType" value="LOCAL" />
       </template>
     </option>
+    <option name="panelTemplate">
+      <template>
+        <option name="modeId" value="Agent" />
+        <option name="model">
+          <model>
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+          </model>
+        </option>
+        <option name="targetType" value="BACKGROUND" />
+      </template>
+    </option>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for apps.users.tests.test_models.test_email_must_be_unique.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for apps.users.tests.test_models.test_user_creation.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for apps.users.tests.test_models.executor&quot;: &quot;Run&quot;,
-    &quot;Python.generate_address_signature.executor&quot;: &quot;Run&quot;,
-    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_views.executor&quot;: &quot;Run&quot;,
-    &quot;Python.webauthn_service.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;bb-kyc&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/jabir/WebstormProjects/charity-system/backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique.executor": "Run",
+    "Python tests.Python tests for apps.users.tests.test_models.test_email_must_be_unique.executor": "Run",
+    "Python tests.Python tests for apps.users.tests.test_models.test_user_creation.executor": "Run",
+    "Python tests.pytest for apps.users.tests.test_models.executor": "Run",
+    "Python.generate_address_signature.executor": "Run",
+    "Python.settings.executor": "Run",
+    "Python.test_views.executor": "Run",
+    "Python.webauthn_service.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "bb-kyc",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/jabir/WebstormProjects/charity-system/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -313,7 +321,8 @@
       <workItem from="1781241215897" duration="2634000" />
       <workItem from="1781674022607" duration="8566000" />
       <workItem from="1781759090867" duration="11362000" />
-      <workItem from="1781845705586" duration="711000" />
+      <workItem from="1781845705586" duration="1064000" />
+      <workItem from="1781848035163" duration="2290000" />
     </task>
     <servers />
   </component>

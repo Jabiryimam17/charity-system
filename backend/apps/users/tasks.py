@@ -1,5 +1,5 @@
 from celery import shared_task
-from models import ScoreEvents, Score
+from .models import ScoreEvents, Score
 
 @shared_task(bind=True, max_retries=3)
 def update_user_score_task(self, user_address, score_id, delta, tx_hash, log_index, block_number, block_timestamp):
@@ -17,7 +17,15 @@ def update_user_score_task(self, user_address, score_id, delta, tx_hash, log_ind
         score_id=score_id,
         delta=delta
     )
-    score = Score.objects.filter(address=user_address, score_id=score_id).first()
-    score.score_val += delta
-    score.last_update = max(score.last_update, block_timestamp)
-    Score.objects.update_or_create(address=user_address, defaults={'score_id': score_id, 'score_val': score.score_val})
+    score, created = Score.objects.get_or_create(
+        address=user_address, 
+        score_id=score_id,
+        defaults={'score_val': 0, 'last_update': block_timestamp}
+    )
+    if not created:
+        score.score_val += delta
+        score.last_update = max(score.last_update, block_timestamp)
+        score.save()
+    else:
+        score.score_val = delta
+        score.save()

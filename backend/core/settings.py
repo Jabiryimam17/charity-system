@@ -95,7 +95,7 @@ DATABASES = {
         'PASSWORD': os.getenv('DB_PASSWORD', ''),
         # If DB_HOST isn't in .env, leaving it completely out or setting to None
         # forces Postgres to use local Unix sockets (fixing the test crash!)
-        'HOST': os.getenv('DB_HOST', None),
+        'HOST': os.getenv('DB_HOST', ''),
         'PORT': os.getenv('DB_PORT', '5432'),
         'OPTIONS': {
             'options': '-c search_path=charity_app,public'
@@ -163,5 +163,12 @@ OTP_WEBAUTHN_ALLOWED_ORIGINS = ["http://localhost:3000"]
 STATIC_URL = 'static/'
 
 
-# gcp cloud vision settings
+
+# Blockchain settings
+WEB3_PROVIDER_URL = os.getenv('WEB3_PROVIDER_URL', 'http://localhost:8545')
+WEB3_WEBSOCKET_URL = os.getenv('WEB3_WEBSOCKET_URL', 'ws://localhost:8545')
+BLOCK_TRACKER_RANGE = int(os.getenv('BLOCK_TRACKER_RANGE', '100'))
+USER_REGISTRAR_CONTRACT_ADDRESS = os.getenv('USER_REGISTRAR_CONTRACT_ADDRESS')
+
+# GCP cloud vision settings
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.join(BASE_DIR, "gcloud-key.json")
