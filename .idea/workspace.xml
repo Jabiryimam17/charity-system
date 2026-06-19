@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62c7a4b6-aac0-495a-a7d3-9c5761bf3c95" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/apps/auths/tests/test_register_views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/apps/blockchain/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/apps/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/charity-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/charity-system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/services/email_otp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/services/email_otp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/tests/test_views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/apps/auths/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/apps/auths/views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/users/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/users/services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/users/tests/test_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/users/tests/test_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/views/email_otp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/email_otp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/core/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/core/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +32,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="14854" />
+    <option name="cachedIndexableFilesCount" value="15041" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -57,60 +64,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000165272602646" />
-      <entry key="S5" value="1.0263202354583207" />
-      <entry key="S10" value="1.3655622072694256" />
-      <entry key="S30" value="3.911799932085619" />
-      <entry key="S60" value="6.4682367274461265" />
-      <entry key="M2" value="8.70420821147989" />
-      <entry key="M5" value="13.1370731747187" />
-      <entry key="M10" value="32.16521006912826" />
-      <entry key="M15" value="61.89667828058166" />
-      <entry key="M30" value="167.52042912667486" />
-      <entry key="H1" value="387.8538338001937" />
-      <entry key="H2" value="807.1826723227637" />
-      <entry key="H4" value="1504.5611000406336" />
-      <entry key="D1" value="3522.911920138026" />
-      <entry key="W1" value="4263.0366532950575" />
+      <entry key="MS500" value="1.0000000001074463" />
+      <entry key="S2" value="1.0038505501868096" />
+      <entry key="S5" value="1.191600177394589" />
+      <entry key="S10" value="1.9520739258678552" />
+      <entry key="S30" value="6.104706743862456" />
+      <entry key="S60" value="11.170550061764406" />
+      <entry key="M2" value="17.513397030985264" />
+      <entry key="M5" value="30.24002020927851" />
+      <entry key="M10" value="46.47562564579605" />
+      <entry key="M15" value="62.737624213428276" />
+      <entry key="M30" value="122.65181637775551" />
+      <entry key="H1" value="274.9776849688397" />
+      <entry key="H2" value="634.8860453678843" />
+      <entry key="H4" value="1359.059999359069" />
+      <entry key="D1" value="4012.676761106189" />
+      <entry key="W1" value="5147.731258586429" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="6.9721347131162E-89" />
-      <entry key="MS500" value="2.3370824246522547E-18" />
-      <entry key="S2" value="4.173527173295057E-5" />
-      <entry key="S5" value="0.029864712290002735" />
-      <entry key="S10" value="0.3533132312136962" />
-      <entry key="S30" value="2.0299656824560395" />
-      <entry key="S60" value="3.179243753252037" />
-      <entry key="M2" value="3.9869429299569044" />
-      <entry key="M5" value="4.859370217461637" />
-      <entry key="M10" value="7.350810522501888" />
-      <entry key="M15" value="11.32509497651968" />
-      <entry key="M30" value="25.502832321132555" />
-      <entry key="H1" value="51.592396349820575" />
-      <entry key="H2" value="99.0350741148286" />
-      <entry key="H4" value="181.97861498835147" />
-      <entry key="D1" value="423.3862734454003" />
-      <entry key="W1" value="510.21547575565893" />
+      <entry key="MS100" value="4.195062674610443E-46" />
+      <entry key="MS500" value="8.405198262863174E-10" />
+      <entry key="S2" value="0.005535779171978082" />
+      <entry key="S5" value="0.15346686817234736" />
+      <entry key="S10" value="0.5347962950805446" />
+      <entry key="S30" value="1.7334575376872043" />
+      <entry key="S60" value="3.0769637225709423" />
+      <entry key="M2" value="4.9628955097460175" />
+      <entry key="M5" value="9.255276303467037" />
+      <entry key="M10" value="13.591051369740075" />
+      <entry key="M15" value="16.64580571062742" />
+      <entry key="M30" value="25.23085007527731" />
+      <entry key="H1" value="45.570022301229535" />
+      <entry key="H2" value="91.72482388201982" />
+      <entry key="H4" value="181.39669260397736" />
+      <entry key="D1" value="502.9024820904744" />
+      <entry key="W1" value="637.8879594362074" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.5369091383223005E-83" />
-      <entry key="MS500" value="2.7646297616905064E-17" />
-      <entry key="S2" value="1.1232667190862972E-4" />
-      <entry key="S5" value="0.07214921159095446" />
-      <entry key="S10" value="0.8277581373414544" />
-      <entry key="S30" value="5.3773659277182775" />
-      <entry key="S60" value="9.29243973169951" />
-      <entry key="M2" value="12.488148638777494" />
-      <entry key="M5" value="17.903329073965114" />
-      <entry key="M10" value="39.45393180614355" />
-      <entry key="M15" value="73.17488073829404" />
-      <entry key="M30" value="193.07458090727508" />
-      <entry key="H1" value="439.7216134153597" />
-      <entry key="H2" value="906.74221415348" />
-      <entry key="H4" value="1687.253092345869" />
-      <entry key="D1" value="3947.236031677694" />
-      <entry key="W1" value="4774.242623446293" />
+      <entry key="MS100" value="3.765712899446959E-43" />
+      <entry key="MS500" value="3.621007397339842E-9" />
+      <entry key="S2" value="0.014574050421654793" />
+      <entry key="S5" value="0.45427056849697894" />
+      <entry key="S10" value="1.8029110018722416" />
+      <entry key="S30" value="7.481254770796506" />
+      <entry key="S60" value="14.020673286291627" />
+      <entry key="M2" value="22.332147899553053" />
+      <entry key="M5" value="39.409121115561184" />
+      <entry key="M10" value="60.007140198263066" />
+      <entry key="M15" value="79.33369004459503" />
+      <entry key="M30" value="147.84015529186416" />
+      <entry key="H1" value="320.52190791480365" />
+      <entry key="H2" value="726.6956404268913" />
+      <entry key="H4" value="1540.7716948017076" />
+      <entry key="D1" value="4516.401954523897" />
+      <entry key="W1" value="5786.591438215736" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -146,7 +153,9 @@
     &quot;Python tests.Python tests for apps.users.tests.test_models.test_email_must_be_unique.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for apps.users.tests.test_models.test_user_creation.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.pytest for apps.users.tests.test_models.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generate_address_signature.executor&quot;: &quot;Run&quot;,
     &quot;Python.settings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_views.executor&quot;: &quot;Run&quot;,
     &quot;Python.webauthn_service.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -197,7 +206,7 @@
       <recent name="$PROJECT_DIR$/backend/utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for apps.users.tests.test_models">
+  <component name="RunManager" selected="Python tests.Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique">
     <configuration name="Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="charity-system" />
       <option name="ENV_FILES" value="" />
@@ -270,8 +279,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for apps.users.tests.test_models" />
         <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique" />
+        <item itemvalue="Python tests.pytest for apps.users.tests.test_models" />
         <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_email_must_be_unique" />
         <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_user_creation" />
       </list>
@@ -302,7 +311,9 @@
       <workItem from="1781067545809" duration="13885000" />
       <workItem from="1781154350334" duration="11058000" />
       <workItem from="1781241215897" duration="2634000" />
-      <workItem from="1781674022607" duration="4291000" />
+      <workItem from="1781674022607" duration="8566000" />
+      <workItem from="1781759090867" duration="11362000" />
+      <workItem from="1781845705586" duration="711000" />
     </task>
     <servers />
   </component>
@@ -354,6 +365,11 @@
           <url>file://$PROJECT_DIR$/backend/apps/users/tests/test_models.py</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/apps/auths/tests/test_register_views.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

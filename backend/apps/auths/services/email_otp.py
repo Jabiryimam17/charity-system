@@ -1,9 +1,7 @@
-from apps.auths.models import User
 from apps.auths.enums import AuthSteps
-from argon2 import PasswordHasher
+from apps.users.models import User
 from django.utils import timezone
 from apps.utils.email_manage import send_email
-from requests import status_codes
 
 
 class EmailOtpService:
@@ -12,41 +10,52 @@ class EmailOtpService:
                       last_name: str, password: str, phone_number: str):
         from apps.users.models import User
         from web3 import Web3
+        from eth_account import Account
         from eth_account.messages import encode_defunct
-        address_hash = Web3.keccak(text=user_address).hex()
-        if not Web3.isAddress(user_address):
+        if not Web3.is_address(user_address):
             return {"success": False, "message": "Invalid Ethereum address", "data": "", "status_code": 400}
-
+        address_hash = Web3.keccak(text=user_address).hex()
         signed_message = encode_defunct(text=message)
-        recover_address = Web3.eth.account.recover_message(signed_message, signature)
-        recover_address_hash = Web3.keccak(text=recover_address).hex()
+        try:
+            recover_address = Account.recover_message(signed_message, signature=signature)
+            recover_address_hash = Web3.keccak(text=recover_address).hex()
+        except Exception as e:
+            return {"success": False, "message": "Invalid signature", "data": "", "status_code": 400}
         if recover_address_hash != address_hash:
             return {"success": False, "message": "Invalid signature", "data": "", "status_code": 400}
 
-        ph = PasswordHasher()
-        hashed_password = ph.hash(password)
-
-        User.objects.create(
+        user = User.objects.create(
             first_name=first_name,
             last_name=last_name,
             address_hash=address_hash,
-            password=hashed_password,
             email=email,
             auth_steps=AuthSteps.WALLET,
             phone_number=phone_number
         )
+        user.set_password(password)
+        user.save()
         return {"success": True, "message": "User registered successfully", "data": "", "status_code": 200}
 
     @staticmethod
     def login(self, email: str, password: str):
-        ph = PasswordHasher()
-        user = User.objects.get(email=email)
-        if not ph.verify(password, user.password):
+        try:
+            user = User.objects.get(email=email)
+        except User.DoesNotExist:
+            return {"success": False, "message": "User not found", "data": "", "status_code": 400}
+        if not user.check_password(password):
             return {"success": False, "message": "Invalid password", "data": "", "status_code": 400}
-        return {"success": True, "message": "successfully logged in", "data": user, "status_code": 200}
+        if not user.auth_steps & AuthSteps.EMAIL:
+            return {"success": False, "message": "Email not verified", "data": "", "status_code": 400}
+        from rest_framework_simplejwt.tokens import RefreshToken
+        refresh = RefreshToken.for_user(user)
+
+        return {"success": True, "message": "successfully logged in", "data": {
+            "access": str(refresh.access_token),
+            "refresh": str(refresh)
+        }, "status_code": 200}
 
     @staticmethod
-    def verify_email(self, email: str, code: str) -> None:
+    def verify_email(self, email: str, code: str) -> dict:
         user = User.objects.get(email=email)
         if user.email_code != code or user.email_code_expiry < timezone.now():
             return {"success": False, "message": "Invalid or expired verification code", "data": "",

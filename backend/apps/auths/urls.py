@@ -1,5 +1,5 @@
 from django.urls import path
-import views
+import apps.auths.views as views
 urlpatterns = [
     path('mfs/setup/', views.totp_setup, name='totp-setup'),
     path('mfs/verify/', views.totp_verify, name='totp-verify'),
@@ -12,4 +12,9 @@ urlpatterns = [
     path("documents/submit/", views.submit_document, name="submit-document"),
     path("documents/status/<int:doc_id>/", views.document_status, name="document-status"),
     path("email-otp/register/", views.register_user, name="register-user"),
+    path("email-otp/login/", views.login, name="login"),
+    path("email-otp/verify-email/", views.verify_email, name="verify-email"),
+    path("email-otp/send-email-code/", views.send_email_code, name="send-email-code"),
+    path("email-otp/forget-password/", views.forget_password, name="forget-password"),
+    path("email-otp/reset-password/", views.reset_password, name="reset-password")
 ]

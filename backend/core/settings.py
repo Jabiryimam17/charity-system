@@ -39,12 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'django_otp',
     'django_otp_webauthn',
     'apps.blockchain',
     'apps.users',
     'apps.auths',
 ]
+
+AUTH_USER_MODEL = 'users.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -121,6 +124,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+PASSWORD_HASHERS = [
+    "django.contrib.auth.hashers.Argon2PasswordHasher",
+    "django.contrib.auth.hashers.PBKDF2PasswordHasher",
+    "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
+]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
@@ -143,7 +152,7 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = f'Charity App <{EMAIL_HOST_USER}>'
 
 # webauthn settings
-OTP_WEBAUTHN_RP_ID = os.environ.get('WEBAUTHN_RP_ID')
+OTP_WEBAUTHN_RP_ID = os.environ.get('WEBAUTHN_RP_ID') or 'localhost'
 OTP_WEBAUTHN_RP_NAME = "Charity App"
 OTP_WEBAUTHN_ALLOWED_ORIGINS = ["http://localhost:3000"]
 

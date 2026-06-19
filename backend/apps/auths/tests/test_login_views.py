@@ -2,4 +2,4 @@ import pytest
 
 
 @pytest.mark.django_db
-def
+def test_login():

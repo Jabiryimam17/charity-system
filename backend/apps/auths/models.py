@@ -49,7 +49,7 @@ class DocumentReview(models.Model):
     region = models.CharField(max_length=255, blank=True)
     reference_no = models.CharField(max_length=255, blank=True)
     notes = models.TextField(blank=True)
-
+    submitted_at = models.DateTimeField(auto_now_add=True)
     reviewer = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='reviewed_docs')
     reviewed_at = models.DateTimeField(null=True)
     class Meta:
