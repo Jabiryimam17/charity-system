@@ -11,6 +11,7 @@ def test_register_user(api_client, wallet):
         'user':{
             'user_address':wallet['address'],
             'message':wallet['message'],
+            'timestamp':wallet['timestamp'],
             'signature':wallet['signature'],
             'email':"alice@example.com",
             'first_name': 'Alice',
@@ -28,6 +29,7 @@ def test_user_exists(api_client, wallet):
         'user':{
             'user_address':wallet['address'],
             'message':wallet['message'],
+            'timestamp':wallet['timestamp'],
             'signature':wallet['signature'],
             'email':'alice@example.com',
             'first_name': 'Alice',
@@ -117,6 +119,7 @@ def test_duplicate_email_returns_400(api_client, wallet_user_payload, second_wal
     # New wallet, but same email
     wallet_user_payload['user_address'] = second_wallet['address']
     wallet_user_payload['message'] = second_wallet['message']
+    wallet_user_payload['timestamp'] = second_wallet['timestamp']
     wallet_user_payload['signature'] = second_wallet['signature']
     
     response = api_client.post(REGISTER_URL,{

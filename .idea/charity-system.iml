@@ -16,7 +16,7 @@
       <excludeFolder url="file://$MODULE_DIR$/blockchain/cache" />
       <excludeFolder url="file://$MODULE_DIR$/blockchain/out" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.12 (charity-system)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.12 (charity-system) (3)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Python 3.12 (charity-system) (2) interpreter library" level="application" />
   </component>

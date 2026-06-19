@@ -12,6 +12,7 @@ class TestEmailOtpService:
         res = EmailOtpService.register_user(
             wallet_user_payload['user_address'],
             wallet_user_payload['message'],
+            wallet_user_payload['timestamp'],
             wallet_user_payload['signature'],
             wallet_user_payload['email'],
             wallet_user_payload['first_name'],
@@ -103,6 +104,7 @@ class TestEmailOtpService:
         # Second registration with same email but different wallet
         wallet_user_payload['user_address'] = second_wallet['address']
         wallet_user_payload['message'] = second_wallet['message']
+        wallet_user_payload['timestamp'] = second_wallet['timestamp']
         wallet_user_payload['signature'] = second_wallet['signature']
         
         res = EmailOtpService.register_user(**wallet_user_payload)

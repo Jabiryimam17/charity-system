@@ -20,15 +20,20 @@ def wallet():
     Generates a random Ethereum keypair + a signed message.
     Use this anywhere you need a valid wallet + signature combo.
     """
+    import time
     account = Account.create()
     message = "Register my wallet"
-    signed = account.sign_message(encode_defunct(text=message))
+    timestamp = str(int(time.time()))
+    full_message = f"{message}{timestamp}"
+    signed = account.sign_message(encode_defunct(text=full_message))
     return {
         "account": account,
         "address": account.address,
         "message": message,
+        "timestamp": timestamp,
         "signature": signed.signature.hex()
     }
+
 
 @pytest.fixture
 def wallet_user_payload(wallet):
@@ -38,24 +43,30 @@ def wallet_user_payload(wallet):
     return {
         'user_address': wallet['address'],
         'message': wallet['message'],
+        'timestamp': wallet['timestamp'],
         'signature': wallet['signature'],
-        'email':'alice@example.com',
-        'first_name':'Alice',
-        'last_name':'Smith',
-        'password':'test123example',
+        'email': 'alice@example.com',
+        'first_name': 'Alice',
+        'last_name': 'Smith',
+        'password': 'test123example',
         'phone_number': '+251923456789'
     }
+
 
 @pytest.fixture
 def second_wallet():
     """ A second independent wallet — useful for ownership/conflict tests """
+    import time
     account = Account.create()
     message = "Register my wallet"
-    signed = account.sign_message(encode_defunct(text=message))
+    timestamp = str(int(time.time()))
+    full_message = f"{message}{timestamp}"
+    signed = account.sign_message(encode_defunct(text=full_message))
     return {
         "account": account,
         "address": account.address,
         "message": message,
+        "timestamp": timestamp,
         "signature": signed.signature.hex(),
     }
 

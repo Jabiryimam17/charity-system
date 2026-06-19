@@ -6,15 +6,25 @@ from apps.utils.email_manage import send_email
 
 class EmailOtpService:
     @staticmethod
-    def register_user(user_address: str, message: str, signature: str, email: str, first_name: str,
+    def register_user(user_address: str, message: str, timestamp: str, signature: str, email: str, first_name: str,
                       last_name: str, password: str, phone_number: str):
         from apps.users.models import User
         from web3 import Web3
         from eth_account import Account
         from eth_account.messages import encode_defunct
+        import time
         
-        if not all([user_address, message, signature, email, password]):
+        if not all([user_address, message, timestamp, signature, email, password]):
             return {"success": False, "message": "Missing required fields", "data": "", "status_code": 400}
+
+        # Verify timestamp (within 1 minute)
+        try:
+            ts = int(timestamp)
+            current_ts = int(time.time())
+            if abs(current_ts - ts) > 60:
+                return {"success": False, "message": "Timestamp out of range", "data": "", "status_code": 400}
+        except (ValueError, TypeError):
+            return {"success": False, "message": "Invalid timestamp", "data": "", "status_code": 400}
 
         if not Web3.is_address(user_address):
             return {"success": False, "message": "Invalid Ethereum address", "data": "", "status_code": 400}
@@ -29,7 +39,9 @@ class EmailOtpService:
         if User.objects.filter(address_hash=address_hash).exists():
             return {"success": False, "message": "User with this wallet already exists", "data": "", "status_code": 400}
 
-        signed_message = encode_defunct(text=message)
+        # Concatenate message and timestamp as done in frontend
+        full_message = f"{message}{timestamp}"
+        signed_message = encode_defunct(text=full_message)
         try:
             recover_address = Account.recover_message(signed_message, signature=signature)
             recover_address_hash = Web3.keccak(text=recover_address).hex()

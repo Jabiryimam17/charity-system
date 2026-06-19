@@ -10,6 +10,7 @@ def register_user(request):
     if user_data.get('email') is None or user_data.get('password') is None or user_data.get('phone_number') is None:
         return Response({"error": "User profile not set correctly"}, status=400)
     res = EmailOtpService.register_user(user_data.get('user_address'), user_data.get('message'),
+                                        user_data.get('timestamp'),
                                         user_data.get('signature'), user_data.get('email'),
                                         user_data.get('first_name'), user_data.get('last_name'),
                                         user_data.get('password'), user_data.get('phone_number'))
