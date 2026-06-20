@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62c7a4b6-aac0-495a-a7d3-9c5761bf3c95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/app/signup/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/verify-email/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/charity-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/charity-system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/auths/services/email_otp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/services/email_otp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/auths/tests/test_email_otp_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/tests/test_email_otp_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/auths/tests/test_register_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/tests/test_register_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/auths/views/email_otp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/email_otp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/apps/utils/email_manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/utils/email_manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/AGENTS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +19,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="15052" />
+    <option name="cachedIndexableFilesCount" value="15056" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -62,61 +50,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000465777346486" />
-      <entry key="S2" value="1.0826122766261115" />
-      <entry key="S5" value="1.3688230947198674" />
-      <entry key="S10" value="1.6079864657684726" />
-      <entry key="S30" value="1.9863227386707505" />
-      <entry key="S60" value="2.4499350619147613" />
-      <entry key="M2" value="3.116832759635715" />
-      <entry key="M5" value="5.709641285759944" />
-      <entry key="M10" value="13.142950596259618" />
-      <entry key="M15" value="24.425174324484622" />
-      <entry key="M30" value="72.62526918158157" />
-      <entry key="H1" value="200.3212697063003" />
-      <entry key="H2" value="517.0794394538617" />
-      <entry key="H4" value="1210.8423092561823" />
-      <entry key="D1" value="4085.5963141694365" />
-      <entry key="W1" value="5409.650107216817" />
+      <entry key="MS100" value="1.0015835060434177" />
+      <entry key="MS500" value="1.3917161245734766" />
+      <entry key="S2" value="2.546090991688817" />
+      <entry key="S5" value="3.253801414446663" />
+      <entry key="S10" value="3.6500366332467777" />
+      <entry key="S30" value="4.250599893120887" />
+      <entry key="S60" value="4.590071155078818" />
+      <entry key="M2" value="6.428985639203842" />
+      <entry key="M5" value="25.633894677506362" />
+      <entry key="M10" value="56.99738152627777" />
+      <entry key="M15" value="80.62765037156362" />
+      <entry key="M30" value="141.5911938264924" />
+      <entry key="H1" value="272.57188236817507" />
+      <entry key="H2" value="586.3325043336586" />
+      <entry key="H4" value="1276.0782205784787" />
+      <entry key="D1" value="4175.054387382096" />
+      <entry key="W1" value="5522.267482420238" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
       <entry key="S5" value="0.0" />
-      <entry key="S10" value="1.7599736418475784E-172" />
-      <entry key="S30" value="1.408059033117039E-57" />
-      <entry key="S60" value="7.502007177656878E-29" />
-      <entry key="M2" value="1.7358014008748274E-14" />
-      <entry key="M5" value="8.845885803426212E-6" />
-      <entry key="M10" value="0.012124856584131599" />
-      <entry key="M15" value="0.16316201580637252" />
-      <entry key="M30" value="2.724526599834413" />
-      <entry key="H1" value="15.409017770700993" />
-      <entry key="H2" value="53.45126568314052" />
-      <entry key="H4" value="138.69717925895665" />
-      <entry key="D1" value="487.60037994442894" />
-      <entry key="W1" value="645.6610047258104" />
+      <entry key="S10" value="3.780256922810425E-198" />
+      <entry key="S30" value="3.9140458997948663E-66" />
+      <entry key="S60" value="3.9553052065017386E-33" />
+      <entry key="M2" value="1.260379402934042E-16" />
+      <entry key="M5" value="1.2335076113332798E-6" />
+      <entry key="M10" value="0.00452769186424832" />
+      <entry key="M15" value="0.08460951987299911" />
+      <entry key="M30" value="1.9619644619022252" />
+      <entry key="H1" value="13.076002595566617" />
+      <entry key="H2" value="49.23886284146471" />
+      <entry key="H4" value="133.11979472854668" />
+      <entry key="D1" value="484.27628678379017" />
+      <entry key="W1" value="645.0303552297268" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="7.108969643972505E-5" />
-      <entry key="MS500" value="0.1480349581361742" />
-      <entry key="S2" value="0.6519589028920905" />
-      <entry key="S5" value="1.0774621826999256" />
-      <entry key="S10" value="1.4108997158045218" />
-      <entry key="S30" value="1.8999932512695534" />
-      <entry key="S60" value="2.400309680823121" />
-      <entry key="M2" value="3.0888703881801938" />
-      <entry key="M5" value="5.69694427715472" />
-      <entry key="M10" value="13.14766560779568" />
-      <entry key="M15" value="24.58227035908141" />
-      <entry key="M30" value="75.34231995033048" />
-      <entry key="H1" value="215.7198059868339" />
-      <entry key="H2" value="570.5710157703733" />
-      <entry key="H4" value="1349.7622497589277" />
-      <entry key="D1" value="4573.973872120429" />
-      <entry key="W1" value="6056.275466287377" />
+      <entry key="MS100" value="0.01700082702002997" />
+      <entry key="MS500" value="0.6848437214650719" />
+      <entry key="S2" value="2.0940557989182387" />
+      <entry key="S5" value="2.9945761769752552" />
+      <entry key="S10" value="3.4593838406734005" />
+      <entry key="S30" value="4.063572876800905" />
+      <entry key="S60" value="4.446056447850274" />
+      <entry key="M2" value="6.337565117429213" />
+      <entry key="M5" value="25.58902992814187" />
+      <entry key="M10" value="56.9758527828637" />
+      <entry key="M15" value="80.69307739575937" />
+      <entry key="M30" value="143.5394525142478" />
+      <entry key="H1" value="285.6347417122446" />
+      <entry key="H2" value="635.6063530347516" />
+      <entry key="H4" value="1409.410738610776" />
+      <entry key="D1" value="4660.1023730647385" />
+      <entry key="W1" value="6168.261224198106" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -165,6 +153,7 @@
     &quot;Python tests.Python tests for apps.users.tests.test_models.test_user_creation.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.pytest for apps.users.tests.test_models.executor&quot;: &quot;Run&quot;,
     &quot;Python.generate_address_signature.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
     &quot;Python.settings.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_views.executor&quot;: &quot;Run&quot;,
     &quot;Python.webauthn_service.executor&quot;: &quot;Run&quot;,
@@ -222,7 +211,32 @@
       <recent name="$PROJECT_DIR$/backend/apps/auth" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="Python.manage">
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="charity-system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (charity-system) (2)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/frontend/package.json" />
       <command value="run" />
@@ -290,8 +304,9 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="$PROJECT_DIR$/backend/.venv/bin/python" />
+      <option name="SDK_NAME" value="Python 3.12 (charity-system) (3)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
@@ -303,6 +318,14 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="Python.manage" />
+      <item itemvalue="Python tests.pytest for apps.users.tests.test_models" />
+      <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique" />
+      <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_email_must_be_unique" />
+      <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_user_creation" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
@@ -342,7 +365,8 @@
       <workItem from="1781759090867" duration="11362000" />
       <workItem from="1781845705586" duration="1064000" />
       <workItem from="1781848035163" duration="8355000" />
-      <workItem from="1781856658819" duration="805000" />
+      <workItem from="1781856658819" duration="2037000" />
+      <workItem from="1781933727770" duration="897000" />
     </task>
     <servers />
   </component>
