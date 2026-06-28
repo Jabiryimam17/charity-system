@@ -4,6 +4,7 @@ from apps.auths.enums import AuthSteps
 from django.utils import timezone
 from datetime import timedelta
 from unittest.mock import patch
+from web3 import Web3
 
 @pytest.mark.django_db
 class TestEmailOtpViews:
@@ -17,10 +18,15 @@ class TestEmailOtpViews:
     def test_login_view(self, api_client, user):
         user.auth_steps |= AuthSteps.EMAIL
         user.set_password('testpassword123')
+        user.address_hash = Web3.keccak(text='0x1111111111111111111111111111111111111111').hex()
         user.save()
 
         url = reverse('login')
-        data = {'email': user.email, 'password': 'testpassword123'}
+        data = {
+            'email': user.email,
+            'password': 'testpassword123',
+            'user_address': '0x1111111111111111111111111111111111111111',
+        }
         response = api_client.post(url, data, format='json')
         assert response.status_code == 200
         assert response.data['success'] is True

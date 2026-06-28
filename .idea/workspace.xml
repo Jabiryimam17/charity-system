@@ -4,9 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62c7a4b6-aac0-495a-a7d3-9c5761bf3c95" name="Changes" comment="">
+    <list default="true" id="1e837e8b-f71b-4fb9-ba68-3bc2d1f415ac" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/services/email_otp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/services/email_otp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/tests/test_email_otp_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/tests/test_email_otp_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/tests/test_email_otp_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/tests/test_email_otp_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/auths/views/email_otp.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/auths/views/email_otp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/blockchain/events_abi.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/blockchain/events_abi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/blockchain/handlers/UserRegistrarHandlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/blockchain/handlers/UserRegistrarHandlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/blockchain/listeners/polling.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/blockchain/listeners/websocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/blockchain/listeners/websocket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/blockchain/management/commands/run_polling_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/blockchain/management/commands/run_polling_listener.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/blockchain/management/commands/run_ws_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/blockchain/management/commands/run_ws_listener.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/blockchain/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/blockchain/routers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/users/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/users/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/apps/users/tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/apps/users/tasks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockchain/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockchain/src/User-Registral.sol" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain/src/User-Registral.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/login/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,19 +35,12 @@
   </component>
   <component name="CopilotPersistence">
     <persistenceIdMap>
-      <entry key="_/home/jabir/WebstormProjects/charity-system" value="3EeszgwYaJf4NUmafHsf4b6i5RU" />
+      <entry key="_/home/jabir/WebstormProjects/charity-system" value="3FOLo2aMAyfAYNieuPxvJsUlfDq" />
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="15056" />
+    <option name="cachedIndexableFilesCount" value="18362" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,84 +63,75 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0015835060434177" />
-      <entry key="MS500" value="1.3917161245734766" />
-      <entry key="S2" value="2.546090991688817" />
-      <entry key="S5" value="3.253801414446663" />
-      <entry key="S10" value="3.6500366332467777" />
-      <entry key="S30" value="4.250599893120887" />
-      <entry key="S60" value="4.590071155078818" />
-      <entry key="M2" value="6.428985639203842" />
-      <entry key="M5" value="25.633894677506362" />
-      <entry key="M10" value="56.99738152627777" />
-      <entry key="M15" value="80.62765037156362" />
-      <entry key="M30" value="141.5911938264924" />
-      <entry key="H1" value="272.57188236817507" />
-      <entry key="H2" value="586.3325043336586" />
-      <entry key="H4" value="1276.0782205784787" />
-      <entry key="D1" value="4175.054387382096" />
-      <entry key="W1" value="5522.267482420238" />
+      <entry key="MS100" value="1.0000018525523315" />
+      <entry key="MS500" value="1.1015722234905205" />
+      <entry key="S2" value="2.0957015238117824" />
+      <entry key="S5" value="2.956642094506753" />
+      <entry key="S10" value="3.411669390274125" />
+      <entry key="S30" value="3.786510136087419" />
+      <entry key="S60" value="3.9077537848383987" />
+      <entry key="M2" value="4.531678017503577" />
+      <entry key="M5" value="11.83661900567255" />
+      <entry key="M10" value="38.45602611754308" />
+      <entry key="M15" value="73.71435666002785" />
+      <entry key="M30" value="173.8041759377954" />
+      <entry key="H1" value="321.52282558774596" />
+      <entry key="H2" value="568.7350832651163" />
+      <entry key="H4" value="920.9200417649811" />
+      <entry key="D1" value="1599.1505268473034" />
+      <entry key="W1" value="1783.530968972747" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="3.780256922810425E-198" />
-      <entry key="S30" value="3.9140458997948663E-66" />
-      <entry key="S60" value="3.9553052065017386E-33" />
-      <entry key="M2" value="1.260379402934042E-16" />
-      <entry key="M5" value="1.2335076113332798E-6" />
-      <entry key="M10" value="0.00452769186424832" />
-      <entry key="M15" value="0.08460951987299911" />
-      <entry key="M30" value="1.9619644619022252" />
-      <entry key="H1" value="13.076002595566617" />
-      <entry key="H2" value="49.23886284146471" />
-      <entry key="H4" value="133.11979472854668" />
-      <entry key="D1" value="484.27628678379017" />
-      <entry key="W1" value="645.0303552297268" />
+      <entry key="MS500" value="6.650109900050574E-290" />
+      <entry key="S2" value="6.606693231920016E-73" />
+      <entry key="S5" value="1.9573439465863957E-29" />
+      <entry key="S10" value="6.213835176921146E-15" />
+      <entry key="S30" value="2.9992739265686495E-5" />
+      <entry key="S60" value="0.008557361425266063" />
+      <entry key="M2" value="0.15399164427493" />
+      <entry key="M5" value="0.9648683742867418" />
+      <entry key="M10" value="3.196895918261914" />
+      <entry key="M15" value="7.202914012984167" />
+      <entry key="M30" value="21.52935514523467" />
+      <entry key="H1" value="47.680431583408506" />
+      <entry key="H2" value="97.95701902512978" />
+      <entry key="H4" value="169.37166734976904" />
+      <entry key="D1" value="300.9912443500087" />
+      <entry key="W1" value="335.73246901891565" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.01700082702002997" />
-      <entry key="MS500" value="0.6848437214650719" />
-      <entry key="S2" value="2.0940557989182387" />
-      <entry key="S5" value="2.9945761769752552" />
-      <entry key="S10" value="3.4593838406734005" />
-      <entry key="S30" value="4.063572876800905" />
-      <entry key="S60" value="4.446056447850274" />
-      <entry key="M2" value="6.337565117429213" />
-      <entry key="M5" value="25.58902992814187" />
-      <entry key="M10" value="56.9758527828637" />
-      <entry key="M15" value="80.69307739575937" />
-      <entry key="M30" value="143.5394525142478" />
-      <entry key="H1" value="285.6347417122446" />
-      <entry key="H2" value="635.6063530347516" />
-      <entry key="H4" value="1409.410738610776" />
-      <entry key="D1" value="4660.1023730647385" />
-      <entry key="W1" value="6168.261224198106" />
+      <entry key="MS100" value="0.5212339507761589" />
+      <entry key="MS500" value="0.9679137295598194" />
+      <entry key="S2" value="1.9825359463899177" />
+      <entry key="S5" value="2.854517428854198" />
+      <entry key="S10" value="3.341376903715617" />
+      <entry key="S30" value="3.7572387910819547" />
+      <entry key="S60" value="3.9006148856729554" />
+      <entry key="M2" value="4.675791541584392" />
+      <entry key="M5" value="12.792064614174784" />
+      <entry key="M10" value="41.63585020294738" />
+      <entry key="M15" value="80.89002614178446" />
+      <entry key="M30" value="195.2910724387107" />
+      <entry key="H1" value="369.1576902047705" />
+      <entry key="H2" value="666.6492301965885" />
+      <entry key="H4" value="1090.2568923191022" />
+      <entry key="D1" value="1900.1319456873111" />
+      <entry key="W1" value="2119.261883544314" />
     </decayedShown>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4,
+  &quot;associatedIndex&quot;: 7,
   &quot;fromUser&quot;: false
 }</component>
-  <component name="ProjectId" id="3EeszgwYaJf4NUmafHsf4b6i5RU" />
+  <component name="ProjectId" id="3FOLo2aMAyfAYNieuPxvJsUlfDq" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectSessionTemplates">
-    <option name="inlineTemplate">
-      <template>
-        <option name="modeId" value="InlineAgent" />
-        <option name="model">
-          <model>
-            <option name="modelType" value="builtin_family" />
-            <option name="modelValue" value="auto" />
-          </model>
-        </option>
-        <option name="targetType" value="LOCAL" />
-      </template>
-    </option>
     <option name="panelTemplate">
       <template>
         <option name="modeId" value="Agent" />
@@ -145,51 +149,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for apps.users.tests.test_models.test_email_must_be_unique.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for apps.users.tests.test_models.test_user_creation.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for apps.users.tests.test_models.executor&quot;: &quot;Run&quot;,
-    &quot;Python.generate_address_signature.executor&quot;: &quot;Run&quot;,
-    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
-    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_views.executor&quot;: &quot;Run&quot;,
-    &quot;Python.webauthn_service.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;bb-kyc&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;24.17.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;24.13.2&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/jabir/WebstormProjects/charity-system/backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;/home/jabir/.nvm/versions/node/v24.17.0/bin/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/jabir/WebstormProjects/charity-system/frontend/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "back-proposal",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "junie.project.settings",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/home/jabir/WebstormProjects/charity-system/frontend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -198,143 +180,6 @@
         <entry key="com.intellij.reactbuddy.storybook" value="false" />
       </map>
     </option>
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/backend" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/frontend/app/verify-email" />
-      <recent name="$PROJECT_DIR$/frontend/app/signup" />
-      <recent name="$PROJECT_DIR$/frontend/app" />
-      <recent name="$PROJECT_DIR$/backend" />
-      <recent name="$PROJECT_DIR$/backend/apps/auth" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.manage">
-    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="charity-system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.12 (charity-system) (2)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/manage.py" />
-      <option name="PARAMETERS" value="runserver" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="charity-system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;apps.users.tests.test_models.test_address_hash_must_be_unique&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for apps.users.tests.test_models.test_email_must_be_unique" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="charity-system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;apps.users.tests.test_models.test_email_must_be_unique&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for apps.users.tests.test_models.test_user_creation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="charity-system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;apps.users.tests.test_models.test_user_creation&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for apps.users.tests.test_models" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="charity-system" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="$PROJECT_DIR$/backend/.venv/bin/python" />
-      <option name="SDK_NAME" value="Python 3.12 (charity-system) (3)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;apps.users.tests.test_models&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="npm.dev" />
-      <item itemvalue="Python.manage" />
-      <item itemvalue="Python tests.pytest for apps.users.tests.test_models" />
-      <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique" />
-      <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_email_must_be_unique" />
-      <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_user_creation" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.dev" />
-        <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_address_hash_must_be_unique" />
-        <item itemvalue="Python tests.pytest for apps.users.tests.test_models" />
-        <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_email_must_be_unique" />
-        <item itemvalue="Python tests.Python tests for apps.users.tests.test_models.test_user_creation" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -345,28 +190,18 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="62c7a4b6-aac0-495a-a7d3-9c5761bf3c95" name="Changes" comment="" />
-      <created>1780550636621</created>
+      <changelist id="1e837e8b-f71b-4fb9-ba68-3bc2d1f415ac" name="Changes" comment="" />
+      <created>1781941362695</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1780550636621</updated>
-      <workItem from="1780550637610" duration="3741000" />
-      <workItem from="1780554548418" duration="7587000" />
-      <workItem from="1780657253925" duration="779000" />
-      <workItem from="1780825975288" duration="4680000" />
-      <workItem from="1780834102273" duration="4368000" />
-      <workItem from="1780895745261" duration="3743000" />
-      <workItem from="1780902019697" duration="6293000" />
-      <workItem from="1780981903709" duration="1016000" />
-      <workItem from="1781067545809" duration="13885000" />
-      <workItem from="1781154350334" duration="11058000" />
-      <workItem from="1781241215897" duration="2634000" />
-      <workItem from="1781674022607" duration="8566000" />
-      <workItem from="1781759090867" duration="11362000" />
-      <workItem from="1781845705586" duration="1064000" />
-      <workItem from="1781848035163" duration="8355000" />
-      <workItem from="1781856658819" duration="2037000" />
-      <workItem from="1781933727770" duration="897000" />
+      <updated>1781941362695</updated>
+      <workItem from="1781941365987" duration="3156000" />
+      <workItem from="1782019660846" duration="5310000" />
+      <workItem from="1782025617076" duration="3966000" />
+      <workItem from="1782206151807" duration="7366000" />
+      <workItem from="1782218343356" duration="278000" />
+      <workItem from="1782221966799" duration="2795000" />
+      <workItem from="1782625737459" duration="6311000" />
     </task>
     <servers />
   </component>
@@ -374,57 +209,14 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="back-kyc" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="back-kyc" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/backend/apps/users/tests/test_models.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/backend/apps/auths/tests/test_register_views.py</url>
-          <line>96</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

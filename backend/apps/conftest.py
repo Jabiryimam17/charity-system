@@ -128,32 +128,38 @@ def admin_client(api_client, admin_user):
 
 @pytest.fixture
 def user(db):
+    address_hash = Web3.keccak(text='0x1111111111111111111111111111111111111111').hex()
     return User.objects.create_user(
         username="alice@example.com",
         first_name="alice",
         last_name="smith",
         email="alice@example.com",
-        password="testpassword123"
+        password="testpassword123",
+        address_hash=address_hash,
     )
 
 
 @pytest.fixture
 def admin_user(db):
+    address_hash = Web3.keccak(text='0x2222222222222222222222222222222222222222').hex()
     return User.objects.create_superuser(
         username="admin@example.com",
         first_name="admin",
         last_name='admin',
         email='admin@example.com',
-        password='testpassword123'
+        password='testpassword123',
+        address_hash=address_hash,
     )
 
 
 @pytest.fixture
 def other_user(db):
+    address_hash = Web3.keccak(text='0x3333333333333333333333333333333333333333').hex()
     return User.objects.create_user(
         username="other@example.com",
         first_name="other",
         last_name="user",
         email="other@example.com",
-        password="testpassword123"
+        password="testpassword123",
+        address_hash=address_hash,
     )

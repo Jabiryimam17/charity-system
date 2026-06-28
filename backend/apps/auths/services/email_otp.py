@@ -6,6 +6,17 @@ from apps.utils.email_manage import send_email
 
 class EmailOtpService:
     @staticmethod
+    def _build_address_hash_candidates(user_address: str) -> set[str]:
+        from web3 import Web3
+
+        variants = {user_address, user_address.lower()}
+        try:
+            variants.add(Web3.to_checksum_address(user_address))
+        except Exception:
+            pass
+
+        return {Web3.keccak(text=variant).hex() for variant in variants}
+    @staticmethod
     def register_user(user_address: str, message: str, timestamp: str, signature: str, email: str, first_name: str,
                       last_name: str, password: str, phone_number: str):
         from apps.users.models import User
@@ -65,21 +76,47 @@ class EmailOtpService:
         return {"success": True, "message": "User registered successfully", "data": "", "status_code": 200}
 
     @staticmethod
-    def login(email: str, password: str):
+    def login(email: str, password: str, user_address: str):
+        from web3 import Web3
+
         try:
             user = User.objects.get(email=email)
         except User.DoesNotExist:
             return {"success": False, "message": "User not found", "data": "", "status_code": 400}
+
+        if not user_address or not Web3.is_address(user_address):
+            return {"success": False, "message": "Invalid Ethereum address", "data": "", "status_code": 400}
+
+        if user.address_hash not in EmailOtpService._build_address_hash_candidates(user_address):
+            return {"success": False, "message": "Wallet address mismatch", "data": "", "status_code": 400}
+
         if not user.check_password(password):
             return {"success": False, "message": "Invalid password", "data": "", "status_code": 400}
         if not user.auth_steps & AuthSteps.EMAIL:
             return {"success": False, "message": "Email not verified", "data": "", "status_code": 400}
+
+        role_key = getattr(user, 'primary_role_key', None) or getattr(user, 'role_key', None)
         from rest_framework_simplejwt.tokens import RefreshToken
         refresh = RefreshToken.for_user(user)
+        refresh['user_id'] = user.id
+        refresh['email'] = user.email
+        refresh['first_name'] = user.first_name
+        refresh['last_name'] = user.last_name
+        refresh['address_hash'] = user.address_hash
+        refresh['wallet_address'] = Web3.to_checksum_address(user_address)
+        refresh['role'] = role_key or ''
 
         return {"success": True, "message": "successfully logged in", "data": {
             "access": str(refresh.access_token),
-            "refresh": str(refresh)
+            "refresh": str(refresh),
+            "user": {
+                "id": user.id,
+                "email": user.email,
+                "first_name": user.first_name,
+                "last_name": user.last_name,
+                "role": role_key,
+                "wallet_address": Web3.to_checksum_address(user_address),
+            }
         }, "status_code": 200}
 
     @staticmethod

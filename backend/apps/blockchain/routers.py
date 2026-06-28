@@ -1,4 +1,3 @@
-from eth_utils import keccak, to_hex
 from apps.blockchain.handlers.UserRegistrarHandlers import ScoreUpdateHandler
 
 
@@ -8,6 +7,11 @@ EVENT_HANDLERS = {
 }
 
 def route_event(event):
-    handler = EVENT_HANDLERS.get(event['topics'][0])
+    topic0 = event['topics'][0]
+    if isinstance(topic0, bytes):
+        topic0 = '0x' + topic0.hex()
+    elif hasattr(topic0, 'hex'):
+        topic0 = topic0.hex()
+    handler = EVENT_HANDLERS.get(topic0)
     if not handler: return
     handler.process(event)

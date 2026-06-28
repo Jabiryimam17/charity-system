@@ -1,5 +1,4 @@
 from apps.auths.services.email_otp import EmailOtpService
-from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -19,7 +18,11 @@ def register_user(request):
 @require_POST
 @api_view(['POST'])
 def login(request):
-    res = EmailOtpService.login(request.data.get('email'), request.data.get('password'))
+    res = EmailOtpService.login(
+        request.data.get('email'),
+        request.data.get('password'),
+        request.data.get('user_address'),
+    )
     return Response(res, status=res["status_code"], content_type='application/json; charset=utf-8', )
 
 @require_POST

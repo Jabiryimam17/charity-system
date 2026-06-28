@@ -5,6 +5,7 @@ from apps.auths.enums import AuthSteps
 from django.utils import timezone
 from datetime import timedelta
 from unittest.mock import patch
+from web3 import Web3
 
 @pytest.mark.django_db
 class TestEmailOtpService:
@@ -55,9 +56,10 @@ class TestEmailOtpService:
     def test_login_success(self, user):
         user.auth_steps |= AuthSteps.EMAIL
         user.set_password('testpassword123')
+        user.address_hash = Web3.keccak(text='0x1111111111111111111111111111111111111111').hex()
         user.save()
 
-        res = EmailOtpService.login(user.email, 'testpassword123')
+        res = EmailOtpService.login(user.email, 'testpassword123', '0x1111111111111111111111111111111111111111')
         assert res['success'] is True
         assert 'access' in res['data']
         assert 'refresh' in res['data']
@@ -65,9 +67,10 @@ class TestEmailOtpService:
     def test_login_email_not_verified(self, user):
         user.auth_steps = AuthSteps.NONE
         user.set_password('testpassword123')
+        user.address_hash = Web3.keccak(text='0x1111111111111111111111111111111111111111').hex()
         user.save()
 
-        res = EmailOtpService.login(user.email, 'testpassword123')
+        res = EmailOtpService.login(user.email, 'testpassword123', '0x1111111111111111111111111111111111111111')
         assert res['success'] is False
         assert "Email not verified" in res['message']
 

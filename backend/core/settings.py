@@ -10,12 +10,22 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 import os
+from datetime import timedelta
 from pathlib import Path
+
+from celery.schedules import crontab
+
 from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 ENV_PATH = os.path.join(BASE_DIR, '.env')
 load_dotenv(ENV_PATH)
+
+
+def _read_key_file(path: Path) -> str:
+    if not path.exists():
+        return ''
+    return path.read_text(encoding='utf-8')
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,6 +47,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'corsheaders',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,6 +63,11 @@ INSTALLED_APPS = [
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 AUTH_USER_MODEL = 'users.User'
+
+JWT_PRIVATE_KEY_PATH = Path(os.getenv('JWT_PRIVATE_KEY_PATH', BASE_DIR / 'keys' / 'private_key.pem'))
+JWT_PUBLIC_KEY_PATH = Path(os.getenv('JWT_PUBLIC_KEY_PATH', BASE_DIR / 'keys' / 'public_key.pem'))
+JWT_PRIVATE_KEY = _read_key_file(JWT_PRIVATE_KEY_PATH)
+JWT_PUBLIC_KEY = _read_key_file(JWT_PUBLIC_KEY_PATH)
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -71,6 +87,21 @@ MIDDLEWARE = [
 #     "django_otp_webauthn.backends.WebAuthnBackend",
 # ]
 ROOT_URLCONF = 'core.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=int(os.getenv('JWT_ACCESS_MINUTES', '30'))),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=int(os.getenv('JWT_REFRESH_DAYS', '7'))),
+    'ALGORITHM': 'RS256' if JWT_PRIVATE_KEY and JWT_PUBLIC_KEY else 'HS256',
+    'SIGNING_KEY': JWT_PRIVATE_KEY or SECRET_KEY,
+    'VERIFYING_KEY': JWT_PUBLIC_KEY,
+    'AUTH_HEADER_TYPES': ('Bearer',),
+}
 
 TEMPLATES = [
     {
@@ -180,6 +211,34 @@ WEB3_PROVIDER_URL = os.getenv('WEB3_PROVIDER_URL', 'http://localhost:8545')
 WEB3_WEBSOCKET_URL = os.getenv('WEB3_WEBSOCKET_URL', 'ws://localhost:8545')
 BLOCK_TRACKER_RANGE = int(os.getenv('BLOCK_TRACKER_RANGE', '100'))
 USER_REGISTRAR_CONTRACT_ADDRESS = os.getenv('USER_REGISTRAR_CONTRACT_ADDRESS')
-
+REPUTATION_CURVE_EXPONENT = 2
 # GCP cloud vision settings
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.join(BASE_DIR, "gcloud-key.json")
+
+
+# Celery settings
+CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL', 'redis://localhost:6379/0')
+CELERY_RESULT_BACKEND = os.getenv('CELERY_RESULT_BACKEND', 'redis://localhost:6379/0')
+CELERY_BEAT_SCHEDULE = {
+    'momentum-promotion-daily': {
+        'task': 'jobs.tasks.run_momentum_promotion_task',
+        'schedule': crontab(hour=0, minute=0),  # midnight every day
+    },
+    'random-promotion-daily': {
+        'task': 'jobs.tasks.run_random_promotion_task',
+        'schedule': crontab(hour=0, minute=30),  # 00:30
+    },
+    'sync-score-events-periodic': {
+        'task': 'apps.reputation.tasks.sync_score_events_task',
+        'schedule': 60.0,
+    },
+    'blockchain-polling-periodic': {
+        'task': 'apps.blockchain.tasks.run_polling_listener_task',
+        'schedule': 60.0,
+    },
+    'blockchain-websocket-listener': {
+        'task': 'apps.blockchain.tasks.run_websocket_listener_task',
+        'schedule': 60.0, # This will just ensure it's running if it somehow stops
+    }
+}
+

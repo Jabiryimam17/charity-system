@@ -9,7 +9,7 @@
 /backend/gcloud-key.json
 /blockchain/out/
 /blockchain/cache/
-
+/backend/keys/
 # Logs
 logs
 *.log

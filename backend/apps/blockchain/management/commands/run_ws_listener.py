@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from apps.blockchain.listeners.websocket import run_websocket_listener
+from apps.blockchain.jobs.ws_listener import run_ws_listener
 
 
 class Command(BaseCommand):
@@ -7,4 +7,4 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         self.stdout.write("Starting WebSocket listener...")
-        run_websocket_listener()
+        run_ws_listener()

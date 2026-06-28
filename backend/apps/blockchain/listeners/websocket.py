@@ -9,7 +9,6 @@ from apps.blockchain.routers import route_event
 logger = logging.getLogger(__name__)
 
 
-# from  apps.blockchain.router import route_event
 
 def load_contract(ws, address, file_path):
     import json

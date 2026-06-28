@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Mail, Lock, Loader2, AlertCircle, CheckCircle2, ArrowRight, Droplets } from 'lucide-react';
 import { saveTokens } from '@/lib/auth';
+import { ethers } from 'ethers';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -24,9 +25,19 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
     setError('');
-    setStatus('Authenticating...');
+    setStatus('Connecting wallet...');
 
     try {
+      if (!window.ethereum) {
+        throw new Error('MetaMask or another Ethereum wallet is required');
+      }
+
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const signer = await provider.getSigner();
+      const address = await signer.getAddress();
+
+      setStatus('Authenticating...');
+
       const response = await fetch('http://localhost:8000/api/auths/email-otp/login/', {
         method: 'POST',
         headers: {
@@ -35,6 +46,7 @@ export default function LoginPage() {
         body: JSON.stringify({
           email: formData.email,
           password: formData.password,
+          user_address: address,
         }),
       });
 
@@ -46,13 +58,11 @@ export default function LoginPage() {
 
       setStatus('Login successful! Redirecting...');
       
-      // Store user info if needed
-      if (result.user) {
-        localStorage.setItem('user', JSON.stringify(result.user));
-      }
-
       if (result.data) {
         saveTokens(result.data);
+        if (result.data.user) {
+          localStorage.setItem('user', JSON.stringify(result.data.user));
+        }
       }
 
       setTimeout(() => {
